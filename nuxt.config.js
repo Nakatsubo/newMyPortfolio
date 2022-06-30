@@ -50,6 +50,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     'nuxt-webfontloader', // 追加
+    'nuxt-microcms-module', // 追加
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -72,5 +73,13 @@ export default {
   //     families: ['Ubuntu:wght@400,700&display=swap'],
   //   },
   // },
+
+  microcms: {
+    options: {
+      serviceDomain: process.env.SERVICE_DOMAIN,
+      apiKey: process.env.GET_API_KEY,
+    },
+    mode: process.env.NODE_ENV === 'production' ? 'server' : 'all',
+  },
 
 }
