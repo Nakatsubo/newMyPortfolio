@@ -43,6 +43,7 @@ export default {
     '@nuxtjs/stylelint-module',
 
     '@nuxtjs/style-resources', // 追加
+    '@nuxtjs/date-fns',  // 追加
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
