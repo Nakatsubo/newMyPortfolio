@@ -114,11 +114,12 @@ body {
   font-weight: 300;
   margin: 0 auto;
   z-index:5;
-}
+}  */
+
 section:not(.first) {
   opacity: 0;
   visibility: hidden;
-}  */
+}
 
 nav {
   position: fixed;
