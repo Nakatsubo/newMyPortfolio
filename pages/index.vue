@@ -1,29 +1,135 @@
 <template>
   <div class="index-wrapper">
 
-    <section class="index-wrapper__section isFirst panel blue" id="one">
-      <h1>Fading Transitions</h1>
-      <div class="scroll-down">Scroll up or down<div class="arrow"></div></div>
+    <section class="index-wrapper__section isFirst blue">
+      <div class="index-wrapper__section--introduction section-inner introduction-wrapper">
+        <div class="introduction-wrapper__greet">
+          <h1 class="introduction-wrapper__greet--title isSerif">
+            WELCOME TO<br>
+            THE WORKSPACE OF<br>
+            <span class="coloring">YUSUKE NAKATSUBO</span>
+          </h1>
+           <p class="introduction-wrapper__greet--subtitle">
+             WEB DESIGNER, WEB DEVELOPER & WEB DIRECTER IN TOKYO.
+           </p>
+        </div>
+        <div class="introduction-wrapper__arrow">
+          <object type="image/svg+xml" data="/img/arrow.svg" class="introduction-wrapper__arrow--image"></object>
+        </div>
+      </div>  
     </section>
-    <section class="index-wrapper__section panel red" id="two">
-      <h1>section 2 red</h1>
+
+    <section class="index-wrapper__section red">
+      <div class="index-wrapper__section--project section-inner project-wrapper">
+        <div class="section-inner__title project-wrapper__title">
+          <h1 class="section-inner--text project-wrapper--text">
+            PROJECT
+          </h1>
+        </div>
+        <div class="section-inner__heading project-wrapper__heading">
+          <p class="section-inner__heading--text project-wrapper__heading--text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="section-inner__body project-wrapper__body">
+          <p class="section-inner__body--text project-wrapper__body--text">
+            これは生涯おそらくいわゆる学習通りにおいてもののために思っなな。とうてい晩に想像年は無論こういう批評ですうなどが入ってならんをは関係するたですし、どうにも聴きありましないなかっ。弁当に忘れるないものはようやく時間がどうしてもでないん。とうとう久原さんから注意性全く開始がありでしょ先生その支私か滅亡がというご区別ませますですでしば、その今日はおれか仕儀仕合せが思いて、岡田さんの事を数のそれにけっしてご努力とできて私自己をご意味をするように無論お教育で思わべきですば、常に何だか蹂躙にできるだておりなのに見せるでしょまし。
+          </p>
+        </div>
+      </div>
     </section>
-    <section class="index-wrapper__section panel orange" id="three">
-      <h1>section 3 orange</h1>
+
+    <section class="index-wrapper__section orange">
+      <div class="index-wrapper__section--about section-inner about-wrapper">
+        <div class="section-inner__title about-wrapper__title">
+          <h1 class="section-inner__title--text about-wrapper__heading--text">
+            ABOUT
+          </h1>
+        </div>
+        <div class="section-inner__heading about-wrapper__heading">
+           <p class="section-inner__heading--text about-wrapper__heading--text">
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+           </p>
+        </div>
+        <div class="section-inner__body about-wrapper__body">
+          <p class="section-inner__body--text about-wrapper__body--text">
+            これは生涯おそらくいわゆる学習通りにおいてもののために思っなな。とうてい晩に想像年は無論こういう批評ですうなどが入ってならんをは関係するたですし、どうにも聴きありましないなかっ。弁当に忘れるないものはようやく時間がどうしてもでないん。とうとう久原さんから注意性全く開始がありでしょ先生その支私か滅亡がというご区別ませますですでしば、その今日はおれか仕儀仕合せが思いて、岡田さんの事を数のそれにけっしてご努力とできて私自己をご意味をするように無論お教育で思わべきですば、常に何だか蹂躙にできるだておりなのに見せるでしょまし。
+          </p>
+        </div>
+      </div>
     </section>
-    <section class="index-wrapper__section panel purple" id="four">
-      <h1>section 4 purple</h1>
+
+    <section class="index-wrapper__section purple">
+      <div class="index-wrapper__section--blog section-inner blog-wrapper">
+        <div class="section-inner__title blog-wrapper__title">
+          <h1 class="section-inner__title--text blog-wrapper__title--text">
+            BLOG
+          </h1>
+        </div>
+        <div class="section-inner__heading blog-wrapper__heading">
+          <p class="section-inner__heading--text blog-wrapper__heading--text">
+            COMING SOON
+          </p>
+        </div>
+        <!-- <div class="section-inner__body blog-wrapper__body">
+          <p class="section-inner__body--text blog-wrapper__body--text">
+
+          </p>
+        </div> -->
+      </div>
     </section>
-    <section class="index-wrapper__section panel green" id="five">
-      <h1>section 5 green</h1>
+
+    <section class="index-wrapper__section green">
+      <div class="index-wrapper__section--contact section-inner contact-wrapper">
+        <div class="section-inner__title contact-wrapper__title">
+          <h1 class="section-inner__title--text contact-wrapper__title--text">
+            CONTACT
+          </h1>
+        </div>
+        <div class="section-inner__heading contact-wrapper__heading">
+          <p class="section-inner__heading--text contact-wrapper__heading--text">
+            DROP ME AN <span class="coloring">MAIL FORM</span>
+          </p>
+        </div>
+        <div class="section-inner__body contact-wrapper__body">
+          <p class="section-inner__body--text contact-wrapper__body--text">
+          </p>
+          <ul class="sns-list">
+            <li class="sns-list__item"><a href="" class="sns-list__item--linkedin">LINKEDIN</a></li>
+            <li class="sns-list__item"><a href="" class="sns-list__item--facebbook">FACEBOOK</a></li>
+            <li class="sns-list__item"><a href="" class="sns-list__item--twitter">TWITTER</a></li>
+            <li class="sns-list__item"><a href="" class="sns-list__item--instagram">INSTAGRAM</a></li>
+          </ul>
+        </div>
+      </div>
     </section>
     
     <div class="index-wrapper__list">
-      <div class="index-wrapper__list--item">Section one</div>
-      <div class="index-wrapper__list--item">Section two</div>
-      <div class="index-wrapper__list--item">Section three</div>
-      <div class="index-wrapper__list--item">Section four</div>
-      <div class="index-wrapper__list--item">Section five</div>
+      <div class="index-wrapper__list--item item-wrapper">
+        <div class="item-wrapper__number">01</div>
+        <div class="item-wrapper__border"></div>
+        <div class="item-wrapper__text">INTRODUCTION</div>
+      </div>
+      <div class="index-wrapper__list--item item-wrapper">
+        <div class="item-wrapper__number">02</div>
+        <div class="item-wrapper__border"></div>
+        <div class="item-wrapper__text">PROJECT</div>
+      </div>
+      <div class="index-wrapper__list--item item-wrapper">
+        <div class="item-wrapper__number">03</div>
+        <div class="item-wrapper__border"></div>
+        <div class="item-wrapper__text">ABOUT</div>
+      </div>
+      <div class="index-wrapper__list--item item-wrapper">
+        <div class="item-wrapper__number">04</div>
+        <div class="item-wrapper__border"></div>
+        <div class="item-wrapper__text">BLOG</div>
+      </div>
+      <div class="index-wrapper__list--item item-wrapper">
+        <div class="item-wrapper__number">05</div>
+        <div class="item-wrapper__border"></div>
+        <div class="item-wrapper__text">CONTACT</div>
+      </div>
     </div>
 
   </div>  
@@ -130,6 +236,7 @@ export default {
       opacity: 0;
       visibility: hidden;
     }
+
   }
 
   // list
@@ -153,6 +260,18 @@ export default {
       &.isActive {
         color: red;
       }
+    }
+  }
+}
+
+// introduction
+.introduction-wrapper {
+
+  // arrow
+  &__arrow {
+    &--image {
+      width: auto;
+      height: 88px;
     }
   }
 }
