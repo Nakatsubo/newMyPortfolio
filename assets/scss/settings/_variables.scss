@@ -2,24 +2,28 @@
 // Color Settings
 // -------------------------------------------
 // base
-$base-color-primary: #fff;
-$base-color-secondary: #fafafa;
+$base-color-primary: #efeeea;
+$base-color-secondary: #000000;
 
 // text color
-$text-color-primary: #010101;
-$text-color-secondary: #fff;
+$text-color-primary: #000000;
+$text-color-secondary: #efeeea;
 
 // key
-$key-color-black: #010101;
+$key-color-black: #000000;
+$key-color-white: #ffffff;
+$key-color-gray: #b5b5b5;
+$key-color-purple: #745399;
 
 // background
-$color-body-background: $base-color-primary;
+$color-body-background-primary: $base-color-primary;
+$color-body-background-secondary: $base-color-primary;
 
 // -------------------------------------------
 // Typeface Settings
 // -------------------------------------------
-$font-base: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Osaka',
-  'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS P Gothic', sans-serif;
+$font-primary: 'neue-haas-grotesk-display', 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+$font-secondary: 'baskerville-urw', serif;
 
 // -------------------------------------------
 // Break Points
@@ -31,3 +35,8 @@ $breakpoints: (
   'xl': 1200px,
   'xxl': 1440px,
 ) !default;
+
+// -------------------------------------------
+// Transitions
+// -------------------------------------------
+$transition-primary: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);

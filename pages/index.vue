@@ -7,16 +7,16 @@
           <h1 class="introduction-wrapper__greet--title isSerif">
             WELCOME TO<br>
             THE WORKSPACE OF<br>
-            <span class="coloring">YUSUKE NAKATSUBO</span>
+            <span class="isDetail isColoring">YUSUKE NAKATSUBO</span>
           </h1>
            <p class="introduction-wrapper__greet--subtitle">
              WEB DESIGNER, WEB DEVELOPER & WEB DIRECTER IN TOKYO.
            </p>
         </div>
-        <div class="introduction-wrapper__arrow">
-          <object type="image/svg+xml" data="/img/arrow.svg" class="introduction-wrapper__arrow--image"></object>
-        </div>
-      </div>  
+      </div>
+      <div class="introduction-arrow">
+        <object type="image/svg+xml" data="/img/arrow.svg" class="introduction-arrow__image"></object>
+      </div>
     </section>
 
     <section class="index-wrapper__section red">
@@ -27,7 +27,7 @@
           </h1>
         </div>
         <div class="section-inner__heading project-wrapper__heading">
-          <p class="section-inner__heading--text project-wrapper__heading--text">
+          <p class="section-inner__heading--text project-wrapper__heading--text isSerif">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
@@ -37,6 +37,7 @@
           </p>
         </div>
       </div>
+      <div class="index-wrapper__section--link"><nuxt-link to="#">VIEW MORE</nuxt-link></div>
     </section>
 
     <section class="index-wrapper__section orange">
@@ -47,7 +48,7 @@
           </h1>
         </div>
         <div class="section-inner__heading about-wrapper__heading">
-           <p class="section-inner__heading--text about-wrapper__heading--text">
+           <p class="section-inner__heading--text about-wrapper__heading--text isSerif">
              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
            </p>
         </div>
@@ -57,6 +58,7 @@
           </p>
         </div>
       </div>
+      <div class="index-wrapper__section--link"><nuxt-link to="#">VIEW MORE</nuxt-link></div>
     </section>
 
     <section class="index-wrapper__section purple">
@@ -67,7 +69,7 @@
           </h1>
         </div>
         <div class="section-inner__heading blog-wrapper__heading">
-          <p class="section-inner__heading--text blog-wrapper__heading--text">
+          <p class="section-inner__heading--text blog-wrapper__heading--text isSerif">
             COMING SOON
           </p>
         </div>
@@ -77,6 +79,7 @@
           </p>
         </div> -->
       </div>
+      <!-- <div class="index-wrapper__section--link"><nuxt-link to="#" target="_blank">VISIT BLOG</nuxt-link></div> -->
     </section>
 
     <section class="index-wrapper__section green">
@@ -87,23 +90,31 @@
           </h1>
         </div>
         <div class="section-inner__heading contact-wrapper__heading">
-          <p class="section-inner__heading--text contact-wrapper__heading--text">
-            DROP ME AN <span class="coloring">MAIL FORM</span>
-          </p>
-        </div>
-        <div class="section-inner__body contact-wrapper__body">
-          <p class="section-inner__body--text contact-wrapper__body--text">
-          </p>
-          <ul class="sns-list">
-            <li class="sns-list__item"><a href="" class="sns-list__item--linkedin">LINKEDIN</a></li>
-            <li class="sns-list__item"><a href="" class="sns-list__item--facebbook">FACEBOOK</a></li>
-            <li class="sns-list__item"><a href="" class="sns-list__item--twitter">TWITTER</a></li>
-            <li class="sns-list__item"><a href="" class="sns-list__item--instagram">INSTAGRAM</a></li>
-          </ul>
+          <a
+            href="mailto:info@yusukenakatsubo.com"
+            class="section-inner__heading--text contact-wrapper__heading--text isSerif"
+            @mouseover="mouseoverContact"
+            @mouseleave="mouseleaveContact">
+            <div class="link-wrapper" id="link-wrapper">
+              <span>DROP ME AN</span>
+              <span class="link-wrapper__list isColoring">
+                <span class="link-wrapper__list--item">MAIL FORM</span>
+                <span class="link-wrapper__list--item">MAIL FORM</span>
+              </span>
+            </div>
+          </a>
         </div>
       </div>
+      <div class="index-wrapper__section--sns-wrapper sns-wrapper">
+        <ul class="index-wrapper__section--sns-wrapper__sns-list">
+          <li class="sns-wrapper__sns-list--item"><a href="#" target="_blank" class="sns-item-linkedin">LINKEDIN</a></li>
+          <li class="sns-wrapper__sns-list--item"><a href="#" target="_blank" class="sns-item-facebbook">FACEBOOK</a></li>
+          <li class="sns-wrapper__sns-list--item"><a href="#" target="_blank" class="sns-item-twitter">TWITTER</a></li>
+          <li class="sns-wrapper__sns-list--item"><a href="#" target="_blank" class="sns-item-instagram">INSTAGRAM</a></li>
+        </ul>
+      </div>
     </section>
-    
+
     <div class="index-wrapper__list">
       <div class="index-wrapper__list--item item-wrapper">
         <div class="item-wrapper__number">01</div>
@@ -132,7 +143,7 @@
       </div>
     </div>
 
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -143,11 +154,15 @@ if (process.client) {
   gsap.registerPlugin(ScrollTrigger)
 }
 
-// /* eslint-disable */
+/* eslint-disable */
 export default {
   name: 'IndexPage',
+  // data() {
+  //   return {
+  //   }
+  // },
   mounted() {
-    // Adobe Fonts 
+    // Adobe Fonts
     this.$adobeFonts(document)
 
     // Section transition
@@ -191,11 +206,11 @@ export default {
     function setSection(newSection) {
       if (newSection !== currentSection) {
         gsap.timeline()
-          .to(currentSection.querySelector('h1'), {
-            y: -30,
-            autoAlpha: 0,
-            duration: 0.3
-          })
+          // .to(currentSection.querySelector('h1'), {
+          //   y: -30,
+          //   autoAlpha: 0,
+          //   duration: 0.3
+          // })
           .to(currentSection, {
             autoAlpha: 0,
             duration: 0.5
@@ -206,15 +221,26 @@ export default {
             autoAlpha: 1,
             duration: 0.5
           })
-          .fromTo(newSection.querySelector('h1'), {
-            y: 30,
-            autoAlpha: 0
-          }, {
-            autoAlpha: 1,
-            y: 0, duration:.3
-          })
-        currentSection = newSection    
+          // .fromTo(newSection.querySelector('h1'), {
+          //   y: 30,
+          //   autoAlpha: 0
+          // }, {
+          //   autoAlpha: 1,
+          //   y: 0, duration:.3
+          // })
+
+        currentSection = newSection
       }
+    }
+  },
+  methods: {
+    mouseoverContact() {
+      const linkWrapper = document.getElementById('link-wrapper')
+      linkWrapper.classList.add('isHover')
+    },
+    mouseleaveContact() {
+      const linkWrapper = document.getElementById('link-wrapper')
+      linkWrapper.classList.remove('isHover')
     }
   },
 }
@@ -222,67 +248,225 @@ export default {
 
 <style lang="scss" scoped>
 /* stylelint-disable */
+
+// common
 .index-wrapper {
 
   // section
   &__section {
-    position: fixed;
     width: 100%;
     height: 100%;
+    // padding: 0 8vw;
+    position: fixed;
     top: 0;
     left: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
 
     &:not(.isFirst) {
       opacity: 0;
       visibility: hidden;
     }
 
+    // link
+    &--link {
+      position: absolute;
+      bottom: 8rem;
+      right: 8rem;
+      &:after {
+        position: absolute;
+        top: 0.25rem;
+        content: '';
+        display: inline-block;
+        width: 7.5rem;
+        height: auto;
+        border-top: 1px solid $key-color-black;
+        margin-left: 0.5rem;
+      }
+    }
+
+    // sns
+    &--sns-wrapper {
+      position: absolute;
+      bottom: 8rem;
+    }
   }
 
   // list
   &__list {
     position: fixed;
-    top: 10px;
-    right: 10px;
-    background: black;
-    padding: 0px 10px;
-
-    &--item {
-      color: white;
-      font-size: 1.3em;
-      line-height: 1.7;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-
-      &.isActive {
-        color: red;
-      }
-    }
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 98;
   }
+}
+
+// list
+.item-wrapper {
+  padding: 0.75rem 1.5rem;
+  // margin-bottom: 0.25rem;
+  font-size: 1vw;
+  font-weight: 500;
+  color: $text-color-primary;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__border {
+    width: 0.5rem;
+    height: auto;
+    margin: 0 0.5rem;
+    border-top: 1px solid $key-color-black;
+  }
+
+  // isActive
+  &.isActive {
+    border: 1px solid $key-color-black;
+    border-radius: 1.5rem;
+    font-weight: 600;
+  }
+}
+
+.item-wrapper.isActive {
+  .item-wrapper__border {
+    border-top: 2px solid $key-color-black;
+  }
+}
+
+.section-inner {
+  padding: 0 8vw;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  // title
+  &__title {
+    position: fixed;
+    top: 8rem;
+    font-size: 2vw;
+  }
+
+  // heading
+  &__heading {
+    margin-bottom: 2rem;
+    line-height: 1.25;
+    font-size: 4.5vw;
+  }
+
+  // body
+  &__body {
+    line-height: 1.5;
+    font-size: 1.5vw;
+  }
+
 }
 
 // introduction
 .introduction-wrapper {
+  position: relative;
 
-  // arrow
-  &__arrow {
-    &--image {
-      width: auto;
-      height: 88px;
+  // greet
+  &__greet {
+    text-align: center;
+
+    &--title {
+      // line-height: 1.25;
+      margin: 0 auto 2rem;
+      font-size: 6vw;
+    }
+
+    &--subtitle {
+      margin: 2rem auto 0;
+      font-size: 1.5vw;
+      font-weight: 600;
     }
   }
 }
 
+.introduction-arrow {
+  position: absolute;
+  bottom: 2rem;
+  text-align: center;
+
+  &__image {
+    max-width: 3.3rem;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// contact
+.contact-wrapper {
+
+  &__heading {
+    margin-bottom: 0;
+    font-size: 6vw;
+
+    // &--text {
+    //   height: 6vw;
+    //   overflow: hidden;
+    // }
+  }
+}
+
+.link-wrapper {
+  height: 6vw;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  cursor: pointer;
+
+  &__list {
+    margin-left: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    &--item {
+
+      &:last-of-type {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.link-wrapper.isHover {
+
+  .link-wrapper__list {
+
+    .link-wrapper__list--item {
+      transition: $transition-primary;
+      transform: translateY(-100%);
+
+      &:first-of-type {
+        opacity: 0;
+      }
+
+      &:last-of-type {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
 /* dummy colors */
-.blue {
-  background-color: blue;
-}
-.red {
-  background-color: red;
-}
+// .blue {
+//   background-color: blue;
+// }
+// .red {
+//   background-color: red;
+// }
 .orange {
   background-color: orange;
 }
