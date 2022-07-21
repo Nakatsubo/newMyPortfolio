@@ -18,10 +18,14 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       // { rel: 'stylesheet', href: 'https://use.typekit.net/uzi1qtm.css' },
     ],
+    bodyAttrs: {
+      class: 'lightMode'
+    },
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/css/reset.css',
     // 'ress',
     '~/assets/scss/base.scss',
     '~/assets/scss/global.scss'
@@ -29,6 +33,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/utils',
     '~/plugins/adobe-fonts',
   ],
 

@@ -1,22 +1,27 @@
 html {
-  box-sizing: border-box;
   height: 100%;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
 }
 
 body {
   height: 100%;
-  font-family: $font-base;
-  font-size: fz(16);
-  line-height: 1.5;
+  line-height: 1.0;
+  background-color: $color-body-background-primary;
+  font-family: $font-primary;
+  font-size: fz(10);
   color: $text-color-primary;
   letter-spacing: 0.05em;
-  background-color: $color-body-background;
+
+  // lightMode
+  &.lightMode {
+    background-color: $color-body-background-primary;
+    color: $text-color-primary;
+  }
+
+  // darkMode
+  &.darkMode {
+    background-color: $color-body-background-secondary;
+    color: $text-color-secondary;
+  }
 }
 
 img {
@@ -30,11 +35,11 @@ a {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
 strong {
   font-weight: bold;
 }

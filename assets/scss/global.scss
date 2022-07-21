@@ -1,8 +1,150 @@
 // -------------------------------------------
-// Test Settings
+// Common Typeface
 // -------------------------------------------
-h2 {
-  font-family: neue-haas-grotesk-display, serif !important;
-  font-weight: 700 !important;
-  font-style: normal !important;
+.isSerif {
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-style: normal;
 }
+
+ .isColoring {
+   color: $key-color-purple;
+ }
+
+// -------------------------------------------
+// Common Settings
+// -------------------------------------------
+.text-link {
+  transition: $transition-primary;
+}
+
+
+// -------------------------------------------
+// Common Animations
+// -------------------------------------------
+.link-wrapper-contact {
+  height: 6vw;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  cursor: pointer;
+
+  &__list {
+    margin-left: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    &--item {
+
+      &:last-of-type {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.link-wrapper-contact.isHover {
+
+  .link-wrapper-contact__list {
+
+    .link-wrapper-contact__list--item {
+      transition: $transition-primary;
+      transform: translateY(-100%);
+
+      &:first-of-type {
+        opacity: 0;
+      }
+
+      &:last-of-type {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// for SNS
+.link-wrapper-sns {
+  height: 1vw;
+  overflow: hidden;
+  cursor: pointer;
+
+  &__list {
+    // margin-left: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    &--item {
+
+      &:last-of-type {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.link-wrapper-sns.isHover {
+
+  .link-wrapper-sns__list {
+
+    .link-wrapper-sns__list--item {
+      transition: $transition-primary;
+      transform: translateY(-100%);
+
+      &:first-of-type {
+        opacity: 0;
+      }
+
+      &:last-of-type {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// for VIEW MORE
+.link-wrapper-viewmore {
+  height: 1vw;
+  overflow: hidden;
+  cursor: pointer;
+
+  &__list {
+    // margin-left: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    &--item {
+
+      &:last-of-type {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.link-wrapper-viewmore.isHover {
+
+  .link-wrapper-viewmore__list {
+
+    .link-wrapper-viewmore__list--item {
+      transition: $transition-primary;
+      transform: translateY(-100%);
+
+      &:first-of-type {
+        opacity: 0;
+      }
+
+      &:last-of-type {
+        opacity: 1;
+      }
+    }
+  }
+}
+
