@@ -22,7 +22,7 @@
     <section class="index-wrapper__section red">
       <div class="index-wrapper__section--project section-inner project-wrapper">
         <div class="section-inner__title project-wrapper__title">
-          <h1 class="section-inner--text project-wrapper--text">
+          <h1 class="section-inner__title--text project-wrapper--text">
             PROJECT
           </h1>
         </div>
@@ -311,8 +311,8 @@ export default {
             autoAlpha: 0,
             duration: 0.5
           })
-          .to(currentSection.querySelector('h1'), {
-            y: -30,
+          .to(currentSection.querySelector('.section-inner__title--text'), {
+            y: -20,
             autoAlpha: 0,
             duration: 0.3
           })
@@ -322,19 +322,21 @@ export default {
             autoAlpha: 1,
             duration: 0.5
           })
-          .fromTo(newSection.querySelector('h1'), {
-            y: 30,
+          .fromTo(newSection.querySelector('.section-inner__title--text'), {
+            y: 20,
             autoAlpha: 0
           },
           {
             autoAlpha: 1,
             y: 0,
-            duration: 0.3
+            duration: 0.5
           })
 
         currentSection = newSection
+
       }
     }
+
   },
   methods: {
     // for internal link
@@ -515,7 +517,11 @@ export default {
   &__title {
     position: fixed;
     top: 8rem;
-    font-size: 2vw;
+
+    &--text {
+      font-size: 2vw;
+      font-weight: 500;
+    }
   }
 
   // heading
