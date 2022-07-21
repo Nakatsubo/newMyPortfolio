@@ -37,7 +37,19 @@
           </p>
         </div>
       </div>
-      <div class="index-wrapper__section--link"><nuxt-link to="#">VIEW MORE</nuxt-link></div>
+      <div class="index-wrapper__section--link">
+        <a
+          href="#"
+          @mouseover="mouseoverProject"
+          @mouseleave="mouseleaveProject">
+          <div id="link-wrapper-project" class="link-wrapper-viewmore">
+            <span class="link-wrapper-viewmore__list">
+              <span class="link-wrapper-viewmore__list--item">VIEW MORE</span>
+              <span class="link-wrapper-viewmore__list--item">VIEW MORE</span>
+            </span>
+          </div>
+        </a>
+      </div>
     </section>
 
     <section class="index-wrapper__section orange">
@@ -58,7 +70,19 @@
           </p>
         </div>
       </div>
-      <div class="index-wrapper__section--link"><nuxt-link to="#">VIEW MORE</nuxt-link></div>
+      <div class="index-wrapper__section--link">
+        <a
+          href="#"
+          @mouseover="mouseoverAbout"
+          @mouseleave="mouseleaveAbout">
+          <div id="link-wrapper-about" class="link-wrapper-viewmore">
+            <span class="link-wrapper-viewmore__list">
+              <span class="link-wrapper-viewmore__list--item">VIEW MORE</span>
+              <span class="link-wrapper-viewmore__list--item">VIEW MORE</span>
+            </span>
+          </div>
+        </a>
+      </div>
     </section>
 
     <section class="index-wrapper__section purple">
@@ -79,7 +103,20 @@
           </p>
         </div> -->
       </div>
-      <!-- <div class="index-wrapper__section--link"><nuxt-link to="#" target="_blank">VISIT BLOG</nuxt-link></div> -->
+      <!-- <div class="index-wrapper__section--link">
+        <a
+          href="#"
+          target="_blank"
+          @mouseover="mouseoverBlog"
+          @mouseleave="mouseleaveBlog">
+          <div id="link-wrapper-blog" class="link-wrapper-viewmore">
+            <span class="link-wrapper-viewmore__list">
+              <span class="link-wrapper-viewmore__list--item">VISIT BLOG</span>
+              <span class="link-wrapper-viewmore__list--item">VISIT BLOG</span>
+            </span>
+          </div>
+        </a>
+      </div> -->
     </section>
 
     <section class="index-wrapper__section green">
@@ -95,22 +132,78 @@
             class="section-inner__heading--text contact-wrapper__heading--text isSerif"
             @mouseover="mouseoverContact"
             @mouseleave="mouseleaveContact">
-            <div class="link-wrapper" id="link-wrapper">
+            <div id="link-wrapper-contact" class="link-wrapper-contact">
               <span>DROP ME AN</span>
-              <span class="link-wrapper__list isColoring">
-                <span class="link-wrapper__list--item">MAIL FORM</span>
-                <span class="link-wrapper__list--item">MAIL FORM</span>
+              <span class="link-wrapper-contact__list isColoring">
+                <span class="link-wrapper-contact__list--item">MAIL FORM</span>
+                <span class="link-wrapper-contact__list--item">MAIL FORM</span>
               </span>
             </div>
           </a>
         </div>
       </div>
       <div class="index-wrapper__section--sns-wrapper sns-wrapper">
-        <ul class="index-wrapper__section--sns-wrapper__sns-list">
-          <li class="sns-wrapper__sns-list--item"><a href="#" target="_blank" class="sns-item-linkedin">LINKEDIN</a></li>
-          <li class="sns-wrapper__sns-list--item"><a href="#" target="_blank" class="sns-item-facebbook">FACEBOOK</a></li>
-          <li class="sns-wrapper__sns-list--item"><a href="#" target="_blank" class="sns-item-twitter">TWITTER</a></li>
-          <li class="sns-wrapper__sns-list--item"><a href="#" target="_blank" class="sns-item-instagram">INSTAGRAM</a></li>
+        <ul class="index-wrapper__section--sns-wrapper__sns-list sns-wrapper__sns-list">
+          <li class="sns-wrapper__sns-list--item">
+            <a
+              href="#"
+              target="_blank"
+              class="sns-item-linkedin"
+              @mouseover="mouseoverLinkedin"
+              @mouseleave="mouseleaveLinkedin">
+              <div id="link-wrapper-linkedin" class="link-wrapper-sns">
+                <span class="link-wrapper-sns__list">
+                  <span class="link-wrapper-sns__list--item">LINKEDIN</span>
+                  <span class="link-wrapper-sns__list--item">LINKEDIN</span>
+                </span>
+              </div>
+            </a>
+          </li>
+          <li class="sns-wrapper__sns-list--item">
+            <a
+              href="#"
+              target="_blank"
+              class="sns-item-facebbook"
+              @mouseover="mouseoverFacebook"
+              @mouseleave="mouseleaveFacebook">
+              <div id="link-wrapper-facebook" class="link-wrapper-sns">
+                <span class="link-wrapper-sns__list">
+                  <span class="link-wrapper-sns__list--item">FACEBOOK</span>
+                  <span class="link-wrapper-sns__list--item">FACEBOOK</span>
+                </span>
+              </div>
+            </a>
+          </li>
+          <li class="sns-wrapper__sns-list--item">
+            <a
+              href="#"
+              target="_blank"
+              class="sns-item-twitter"
+              @mouseover="mouseoverTwitter"
+              @mouseleave="mouseleaveTwitter">
+              <div id="link-wrapper-twitter" class="link-wrapper-sns">
+                <span class="link-wrapper-sns__list">
+                  <span class="link-wrapper-sns__list--item">TWITTER</span>
+                  <span class="link-wrapper-sns__list--item">TWITTER</span>
+                </span>
+              </div>
+            </a>
+          </li>
+          <li class="sns-wrapper__sns-list--item">
+            <a
+              href="#"
+              target="_blank"
+              class="sns-item-instagram"
+              @mouseover="mouseoverInstagram"
+              @mouseleave="mouseleaveInstagram">
+              <div id="link-wrapper-instagram" class="link-wrapper-sns">
+                <span class="link-wrapper-sns__list">
+                  <span class="link-wrapper-sns__list--item">INSTAGRAM</span>
+                  <span class="link-wrapper-sns__list--item">INSTAGRAM</span>
+                </span>
+              </div>
+            </a>
+          </li>
         </ul>
       </div>
     </section>
@@ -162,6 +255,14 @@ export default {
   //   }
   // },
   mounted() {
+    this.$setFillHeight()
+    let viewWindowWidth = window.innerWidth
+    window.addEventListener('resize', () => {
+      if (viewWindowWidth === window.innerWidth) return
+      viewWindowWidth = window.innerWidth
+      this.$setFillHeight()
+    })
+
     // Adobe Fonts
     this.$adobeFonts(document)
 
@@ -206,14 +307,14 @@ export default {
     function setSection(newSection) {
       if (newSection !== currentSection) {
         gsap.timeline()
-          // .to(currentSection.querySelector('h1'), {
-          //   y: -30,
-          //   autoAlpha: 0,
-          //   duration: 0.3
-          // })
           .to(currentSection, {
             autoAlpha: 0,
             duration: 0.5
+          })
+          .to(currentSection.querySelector('h1'), {
+            y: -30,
+            autoAlpha: 0,
+            duration: 0.3
           })
 
         gsap.timeline()
@@ -221,27 +322,89 @@ export default {
             autoAlpha: 1,
             duration: 0.5
           })
-          // .fromTo(newSection.querySelector('h1'), {
-          //   y: 30,
-          //   autoAlpha: 0
-          // }, {
-          //   autoAlpha: 1,
-          //   y: 0, duration:.3
-          // })
+          .fromTo(newSection.querySelector('h1'), {
+            y: 30,
+            autoAlpha: 0
+          },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.3
+          })
 
         currentSection = newSection
       }
     }
   },
   methods: {
+    // for internal link
+    mouseoverProject() {
+      const linkWrapperProject = document.getElementById('link-wrapper-project')
+      linkWrapperProject.classList.add('isHover')
+    },
+    mouseleaveProject() {
+      const linkWrapperProject = document.getElementById('link-wrapper-project')
+      linkWrapperProject.classList.remove('isHover')
+    },
+    mouseoverAbout() {
+      const linkWrapperAbout = document.getElementById('link-wrapper-about')
+      linkWrapperAbout.classList.add('isHover')
+    },
+    mouseleaveAbout() {
+      const linkWrapperAbout = document.getElementById('link-wrapper-about')
+      linkWrapperAbout.classList.remove('isHover')
+    },
+    // for Blog
+    mouseoverBlog() {
+      const linkWrapperBlog = document.getElementById('link-wrapper-blog')
+      linkWrapperBlog.classList.add('isHover')
+    },
+    mouseleaveBlog() {
+      const linkWrapperBlog = document.getElementById('link-wrapper-blog')
+      linkWrapperBlog.classList.remove('isHover')
+    },
+    // for Contact
     mouseoverContact() {
-      const linkWrapper = document.getElementById('link-wrapper')
-      linkWrapper.classList.add('isHover')
+      const linkWrapperContact = document.getElementById('link-wrapper-contact')
+      linkWrapperContact.classList.add('isHover')
     },
     mouseleaveContact() {
-      const linkWrapper = document.getElementById('link-wrapper')
-      linkWrapper.classList.remove('isHover')
-    }
+      const linkWrapperContact = document.getElementById('link-wrapper-contact')
+      linkWrapperContact.classList.remove('isHover')
+    },
+    // for SNS
+    mouseoverLinkedin() {
+      const linkWrapperLinkedin = document.getElementById('link-wrapper-linkedin')
+      linkWrapperLinkedin.classList.add('isHover')
+    },
+    mouseleaveLinkedin() {
+      const linkWrapperLinkedin = document.getElementById('link-wrapper-linkedin')
+      linkWrapperLinkedin.classList.remove('isHover')
+    },
+    mouseoverFacebook() {
+      const linkWrapperFacebook = document.getElementById('link-wrapper-facebook')
+      linkWrapperFacebook.classList.add('isHover')
+    },
+    mouseleaveFacebook() {
+      const linkWrapperFacebook = document.getElementById('link-wrapper-facebook')
+      linkWrapperFacebook.classList.remove('isHover')
+    },
+    mouseoverTwitter() {
+      const linkWrapperTwitter = document.getElementById('link-wrapper-twitter')
+      linkWrapperTwitter.classList.add('isHover')
+    },
+    mouseleaveTwitter() {
+      const linkWrapperTwitter = document.getElementById('link-wrapper-twitter')
+      linkWrapperTwitter.classList.remove('isHover')
+    },
+    mouseoverInstagram() {
+      const linkWrapperInstagram = document.getElementById('link-wrapper-instagram')
+      linkWrapperInstagram.classList.add('isHover')
+    },
+    mouseleaveInstagram() {
+      const linkWrapperInstagram = document.getElementById('link-wrapper-instagram')
+      linkWrapperInstagram.classList.remove('isHover')
+    },
   },
 }
 </script>
@@ -275,9 +438,12 @@ export default {
       position: absolute;
       bottom: 8rem;
       right: 8rem;
+      // font-size: 1vw;
+      // font-weight: 600;
       &:after {
         position: absolute;
         top: 0.25rem;
+        right: -8rem;
         content: '';
         display: inline-block;
         width: 7.5rem;
@@ -290,7 +456,7 @@ export default {
     // sns
     &--sns-wrapper {
       position: absolute;
-      bottom: 8rem;
+      bottom: calc(8rem - 1vw);
     }
   }
 
@@ -415,45 +581,21 @@ export default {
   }
 }
 
-.link-wrapper {
-  height: 6vw;
-  overflow: hidden;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: flex-start;
-  cursor: pointer;
+.sns-wrapper {
 
-  &__list {
-    margin-left: 1rem;
+  &__sns-list {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
 
     &--item {
-
-      &:last-of-type {
-        opacity: 0;
-      }
-    }
-  }
-}
-
-.link-wrapper.isHover {
-
-  .link-wrapper__list {
-
-    .link-wrapper__list--item {
-      transition: $transition-primary;
-      transform: translateY(-100%);
+      margin-left: 2rem;
+      font-size: 1vw;
+      font-weight: 600;
 
       &:first-of-type {
-        opacity: 0;
-      }
-
-      &:last-of-type {
-        opacity: 1;
+        margin-left: 0;
       }
     }
   }
@@ -467,13 +609,13 @@ export default {
 // .red {
 //   background-color: red;
 // }
-.orange {
-  background-color: orange;
-}
-.purple {
-  background-color: purple;
-}
-.green {
-  background-color: green;
-}
+// .orange {
+//   background-color: orange;
+// }
+// .purple {
+//   background-color: purple;
+// }
+// .green {
+//   background-color: green;
+// }
 </style>
