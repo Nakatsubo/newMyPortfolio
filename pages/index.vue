@@ -309,10 +309,20 @@ export default {
         gsap.timeline()
           .to(currentSection, {
             autoAlpha: 0,
-            duration: 0.5
+            duration: 0.45
           })
-          .to(currentSection.querySelector('.section-inner__title--text'), {
-            y: -20,
+          .to(currentSection.querySelector('.section-inner__title'), {
+            y: -10,
+            autoAlpha: 0,
+            duration: 0.3
+          })
+          .to(currentSection.querySelector('.section-inner__heading'), {
+            y: -10,
+            autoAlpha: 0,
+            duration: 0.3
+          })
+          .to(currentSection.querySelector('.section-inner__body'), {
+            y: -10,
             autoAlpha: 0,
             duration: 0.3
           })
@@ -320,16 +330,34 @@ export default {
         gsap.timeline()
           .to(newSection, {
             autoAlpha: 1,
-            duration: 0.5
+            duration: 0.45
           })
-          .fromTo(newSection.querySelector('.section-inner__title--text'), {
-            y: 20,
+          .fromTo(newSection.querySelector('.section-inner__title'), {
+            y: 10,
             autoAlpha: 0
           },
           {
             autoAlpha: 1,
             y: 0,
-            duration: 0.5
+            duration: 0.3
+          })
+          .fromTo(newSection.querySelector('.section-inner__heading'), {
+            y: 10,
+            autoAlpha: 0
+          },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.3
+          })
+          .fromTo(newSection.querySelector('.section-inner__body'), {
+            y: 10,
+            autoAlpha: 0
+          },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.3
           })
 
         currentSection = newSection
@@ -423,8 +451,7 @@ export default {
     height: 100%;
     // padding: 0 8vw;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -438,8 +465,7 @@ export default {
     // link
     &--link {
       position: absolute;
-      bottom: 8rem;
-      right: 8rem;
+      bottom: 8rem; right: 8rem;
       // font-size: 1vw;
       // font-weight: 600;
       &:after {
@@ -465,8 +491,7 @@ export default {
   // list
   &__list {
     position: fixed;
-    bottom: 2rem;
-    left: 2rem;
+    bottom: 2rem; left: 2rem;
     z-index: 98;
   }
 }

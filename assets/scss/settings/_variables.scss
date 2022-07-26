@@ -2,18 +2,18 @@
 // Color Settings
 // -------------------------------------------
 // base
-$base-color-primary: #efeeea;
-$base-color-secondary: #000000;
+$base-color-primary: rgb(239, 238, 234);
+$base-color-secondary: rgb(0, 0, 0);
 
 // text color
-$text-color-primary: #000000;
-$text-color-secondary: #efeeea;
+$text-color-primary: rgb(0, 0, 0);
+$text-color-secondary: rgb(239, 238, 234);
 
 // key
-$key-color-black: #000000;
-$key-color-white: #ffffff;
-$key-color-gray: #b5b5b5;
-$key-color-purple: #745399;
+$key-color-black: rgb(0, 0, 0);
+$key-color-white: rgb(255, 255, 255);
+$key-color-gray: rgb(181, 181, 181);
+$key-color-purple: rgb(116, 83, 153);
 
 // background
 $color-body-background-primary: $base-color-primary;
