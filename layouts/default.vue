@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <TheShape />
+    <!-- <TheShape /> -->
     <TheHeader />
     <main class="main-wrapper">
       <Nuxt />
@@ -11,6 +11,9 @@
 
 <style lang="scss" scoped>
 /* stylelint-disable */
+.container {
+  position: relative;
+}
 
 .main-wrapper {
   z-index: 2;

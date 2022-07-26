@@ -3,7 +3,7 @@
 
     <section class="index-wrapper__section isFirst blue">
       <div class="index-wrapper__section--introduction section-inner introduction-wrapper">
-        <div class="introduction-wrapper__greet">
+        <div class="section-inner__title introduction-wrapper__greet">
           <h1 class="introduction-wrapper__greet--title isSerif">
             WELCOME TO<br>
             THE WORKSPACE OF<br>
@@ -466,11 +466,11 @@ export default {
     &--link {
       position: absolute;
       bottom: 8rem; right: 8rem;
-      // font-size: 1vw;
+      font-size: 1vw;
       // font-weight: 600;
       &:after {
         position: absolute;
-        top: 0.25rem;
+        top: 0.45vw;
         right: -8rem;
         content: '';
         display: inline-block;
@@ -571,6 +571,7 @@ export default {
   // greet
   &__greet {
     text-align: center;
+    position: static;
 
     &--title {
       // line-height: 1.25;
@@ -581,14 +582,14 @@ export default {
     &--subtitle {
       margin: 2rem auto 0;
       font-size: 1.5vw;
-      font-weight: 600;
+      // font-weight: 600;
     }
   }
 }
 
 .introduction-arrow {
   position: absolute;
-  bottom: 2rem;
+  bottom: 8rem;
   text-align: center;
 
   &__image {
