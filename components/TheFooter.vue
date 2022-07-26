@@ -12,7 +12,7 @@
 .footer-wrapper {
   font-size: 1vw;
   position: fixed;
-  bottom: 2rem;
+  bottom: 4rem;
   left: 50%;
   transform: translateX(-50%);
 
