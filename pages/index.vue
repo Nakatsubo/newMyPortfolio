@@ -3,7 +3,7 @@
 
     <section class="index-wrapper__section isFirst blue">
       <div class="index-wrapper__section--introduction section-inner introduction-wrapper">
-        <div class="introduction-wrapper__greet">
+        <div class="section-inner__title introduction-wrapper__greet">
           <h1 class="introduction-wrapper__greet--title isSerif">
             WELCOME TO<br>
             THE WORKSPACE OF<br>
@@ -119,7 +119,7 @@
       </div> -->
     </section>
 
-    <section class="index-wrapper__section green">
+    <section id="index-contact" class="index-wrapper__section green">
       <div class="index-wrapper__section--contact section-inner contact-wrapper">
         <div class="section-inner__title contact-wrapper__title">
           <h1 class="section-inner__title--text contact-wrapper__title--text">
@@ -142,7 +142,7 @@
           </a>
         </div>
       </div>
-      <div class="index-wrapper__section--sns-wrapper sns-wrapper">
+      <div class="index-wrapper__section--sns-wrapper sns-wrapper section-inner__body">
         <ul class="index-wrapper__section--sns-wrapper__sns-list sns-wrapper__sns-list">
           <li class="sns-wrapper__sns-list--item">
             <a
@@ -246,6 +246,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 if (process.client) {
   gsap.registerPlugin(ScrollTrigger)
 }
+gsap.config({
+  nullTargetWarn: false,
+});
 
 /* eslint-disable */
 export default {
@@ -309,10 +312,25 @@ export default {
         gsap.timeline()
           .to(currentSection, {
             autoAlpha: 0,
-            duration: 0.5
+            duration: 0.45
           })
-          .to(currentSection.querySelector('.section-inner__title--text'), {
-            y: -20,
+          .to(currentSection.querySelector('.section-inner__title'), {
+            y: -10,
+            autoAlpha: 0,
+            duration: 0.3
+          })
+          .to(currentSection.querySelector('.section-inner__heading'), {
+            y: -10,
+            autoAlpha: 0,
+            duration: 0.3
+          })
+          .to(currentSection.querySelector('.section-inner__body'), {
+            y: -10,
+            autoAlpha: 0,
+            duration: 0.3
+          })
+          .to(currentSection.querySelector('.sns-wrapper'), {
+            y: -10,
             autoAlpha: 0,
             duration: 0.3
           })
@@ -320,16 +338,43 @@ export default {
         gsap.timeline()
           .to(newSection, {
             autoAlpha: 1,
-            duration: 0.5
+            duration: 0.45
           })
-          .fromTo(newSection.querySelector('.section-inner__title--text'), {
-            y: 20,
+          .fromTo(newSection.querySelector('.section-inner__title'), {
+            y: 10,
             autoAlpha: 0
           },
           {
             autoAlpha: 1,
             y: 0,
-            duration: 0.5
+            duration: 0.3
+          })
+          .fromTo(newSection.querySelector('.section-inner__heading'), {
+            y: 10,
+            autoAlpha: 0
+          },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.3
+          })
+          .fromTo(newSection.querySelector('.section-inner__body'), {
+            y: 10,
+            autoAlpha: 0
+          },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.3
+          })
+          .fromTo(newSection.querySelector('.sns-wrapper'), {
+            y: 10,
+            autoAlpha: 0
+          },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.3
           })
 
         currentSection = newSection
@@ -423,8 +468,7 @@ export default {
     height: 100%;
     // padding: 0 8vw;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -438,17 +482,16 @@ export default {
     // link
     &--link {
       position: absolute;
-      bottom: 8rem;
-      right: 8rem;
-      // font-size: 1vw;
+      bottom: 16rem; right: 16rem;
+      font-size: 1vw;
       // font-weight: 600;
       &:after {
         position: absolute;
-        top: 0.25rem;
-        right: -8rem;
+        top: 0.45vw;
+        right: -16rem;
         content: '';
         display: inline-block;
-        width: 7.5rem;
+        width: 15rem;
         height: auto;
         border-top: 1px solid $key-color-black;
         margin-left: 0.5rem;
@@ -458,23 +501,22 @@ export default {
     // sns
     &--sns-wrapper {
       position: absolute;
-      bottom: calc(8rem - 1vw);
+      bottom: 13rem;
     }
   }
 
   // list
   &__list {
     position: fixed;
-    bottom: 2rem;
-    left: 2rem;
-    z-index: 98;
+    bottom: 4rem; left: 4rem;
+    z-index: 1;
   }
 }
 
 // list
 .item-wrapper {
-  padding: 0.75rem 1.5rem;
-  // margin-bottom: 0.25rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.5rem;
   font-size: 1vw;
   font-weight: 500;
   color: $text-color-primary;
@@ -493,7 +535,7 @@ export default {
   // isActive
   &.isActive {
     border: 1px solid $key-color-black;
-    border-radius: 1.5rem;
+    border-radius: 16.5rem;
     font-weight: 600;
   }
 }
@@ -516,7 +558,7 @@ export default {
   // title
   &__title {
     position: fixed;
-    top: 8rem;
+    top: 12rem;
 
     &--text {
       font-size: 2vw;
@@ -546,6 +588,7 @@ export default {
   // greet
   &__greet {
     text-align: center;
+    position: static;
 
     &--title {
       // line-height: 1.25;
@@ -556,18 +599,18 @@ export default {
     &--subtitle {
       margin: 2rem auto 0;
       font-size: 1.5vw;
-      font-weight: 600;
+      // font-weight: 600;
     }
   }
 }
 
 .introduction-arrow {
   position: absolute;
-  bottom: 2rem;
+  bottom: 12rem;
   text-align: center;
 
   &__image {
-    max-width: 3.3rem;
+    max-width: 6.6rem;
     width: 100%;
     height: auto;
   }
@@ -597,7 +640,7 @@ export default {
 
     &--item {
       margin-left: 2rem;
-      font-size: 1vw;
+      font-size: 1.5vw;
       font-weight: 600;
 
       &:first-of-type {
