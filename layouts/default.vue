@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <!-- <TheShape /> -->
+    <TheShape />
     <TheHeader />
     <main class="main-wrapper">
       <Nuxt />
@@ -16,10 +16,14 @@
 }
 
 .header-wrapper {
-  z-index: 3;
+  z-index: 2;
 }
 
 .main-wrapper {
-  z-index: 2;
+  z-index: 1;
+}
+
+.footer-wrapper {
+  z-index: 1;
 }
 </style>

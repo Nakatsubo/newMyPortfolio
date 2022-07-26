@@ -1,5 +1,5 @@
 <template>
-  <div class="shape-wrapper">
+  <div id="shape-wrapper" class="shape-wrapper">
     <svg width="1688" height="1769" xmlns="http://www.w3.org/2000/svg" class="shape-wrapper__path shape-wrapper__path--01">
       <path d="M900.4 1490c-249.6 158.3-536.8 246-858.5 278L0 1741.8c40.8-9.7 71-2.2 234-40 163.2-37.8 290.4-74.5 427.2-163.5C864.7 1398.2 946 1193.2 717 852.7c-145.1-195.4-157-400.2-26.5-609.4C836.5 9.1 1181.2-78 1440.4 83.7c234 146.2 321.1 491 175 725.3-96 172.7-199.2 375.4-715 681z" stroke-width=".5" fill="none" fill-rule="evenodd"></path>
     </svg>
@@ -15,7 +15,7 @@
 .shape-wrapper {
   position: fixed;
   top: 0; right: 0; bottom: 0; left: 0;
-  z-index: 1;
+  z-index: 0;
   overflow: hidden;
 
   &__path {
@@ -38,10 +38,18 @@
     }
 
     path {
-      stroke: #000;
+      stroke: $key-color-black;
       transition: all 0.4s linear;
     }
 
+  }
+}
+
+.shape-wrapper.isMenuOpen {
+  z-index: 97;
+
+  path {
+    stroke: $key-color-white;
   }
 }
 

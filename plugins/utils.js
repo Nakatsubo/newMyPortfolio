@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // 画面の高さいっぱいに要素を表示させる
 const setFillHeight = () => {
   const viewWindowHeight = window.innerHeight * 0.01
@@ -6,15 +8,14 @@ const setFillHeight = () => {
 
 // 背景を固定する
 const bodyScrollPrevent = (flag) => {
-  let currentPosition = document.getElementsByTagName('body')[0]
-  const body = document.getElementsByTagName('body')[0]
-  const getUserAgent = window.navigator.userAgent.toLowerCase()
-  const isUserAgent = getUserAgent.includes('iphone') === true || getUserAgent.includes('ipad') === true || getUserAgent.includes('macintosh') === true && 'ontouchend' in document
-  const scrollBarWidth = window.innerWidth - document.body.clientWidth
+  let currentPosition, body = document.getElementsByTagName('body')[0]
+  let getuserAgent = window.navigator.userAgent.toLowerCase()
+  let isUserAgent = getuserAgent.indexOf('iphone') > -1 || getuserAgent.indexOf('ipad') > -1 || getuserAgent.indexOf('macintosh')>-1 && 'ontouchend' in document
+  let scrollBarWidth = window.innerWidth - document.body.clientWidth
   if (flag) {
     body.style.paddingRight = scrollBarWidth + 'px'
     if (isUserAgent) {
-      currentPosition =- window.pageYOffset
+      currentPosition =- window.pageYOffset,
       body.style.position = 'fixed'
       body.style.width = '100%'
       body.style.top = currentPosition +'px'
@@ -39,6 +40,6 @@ const bodyScrollPrevent = (flag) => {
 
 // エクスポート
 export default (context, inject) => {
-  inject('setFillHeight', setFillHeight)
   inject('bodyScrollPrevent', bodyScrollPrevent)
+  inject('setFillHeight', setFillHeight)
 }
