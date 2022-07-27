@@ -1,15 +1,20 @@
 <template>
-  <header class="header-wrapper">
+  <header id="header-wrapper" class="header-wrapper">
     <div class="header-wrapper__inner header-inner">
       <div class="header-wrapper__inner--logo header-inner__logo">
         <component :is="isTopPage ? 'h1' : 'p'">
           <nuxt-link to="/">
-            <object type="image/svg+xml" data="/img/logo.svg" class="header-inner__logo--image"></object>
+            <svg xmlns="http://www.w3.org/2000/svg" class="header-inner__logo--image" viewBox="0 0 50 50">
+              <title>YUSUKE NAKATSUBO</title>
+              <path d="M14.919,50 4.839,37.5 4.839,50z"/>
+              <path d="M14.919,3.125L4.839,0c0,1.983,0,7.324,0,9.375l30.242,37.5L45.161,50c0-1.983,0-7.324,0-9.375L14.919,3.125z"/>
+              <path d="M40.121,0c-2.513,0-7.569,0-10.081,0l10.081,6.25l5.04,6.25V0H40.121z"/>
+            </svg>
           </nuxt-link>
         </component>
       </div>
 
-      <div class="header-wrapper__inner--menu header-inner__menu">
+      <div id="menu-open-btn" class="header-wrapper__inner--menu header-inner__menu">
         <div
           class="header-inner__menu--g"
           @mouseover="mouseoverMenuOpen"
@@ -25,25 +30,57 @@
 
       <div id="glMenu" class="glMenu">
         <div class="glMenu__scroll">
-          <div class="glMenu__scroll--content glMenu-wrapper">
-            <ul class="glMenu-wrapper__list">
-              <li class="glMenu-wrapper__list--item">
-                <nuxt-link to="#">PROJECT</nuxt-link>
-              </li>
-              <li class="glMenu-wrapper__list--item">
-                <nuxt-link to="#">ABOUT</nuxt-link>
-              </li>
-              <li class="glMenu-wrapper__list--item">
-                <a href="#" target="_blank">BLOG</a>
-              </li>
-              <li class="glMenu-wrapper__list--item">
-                <nuxt-link to="/#index-contact">CONTACT</nuxt-link>
-              </li>
-            </ul>
+          <div class="glMenu__scroll--content glMenu-wrapper isSerif">
+            <div class="glMenu-wrapper-top">
+              <ul class="glMenu-wrapper-top__list">
+                <li class="glMenu-wrapper-top__list--item" @mouseover="mouseoverProject" @mouseleave="mouseleaveProject">
+                  <nuxt-link
+                    to="#"
+                    class="glMenu-item-project"
+                    >
+                    <div id="link-wrapper-project" class="link-wrapper-glMenu">
+                      <span class="link-wrapper-glMenu__list">
+                        <span class="link-wrapper-glMenu__list--item">PROJECT</span>
+                        <span class="link-wrapper-glMenu__list--item">PROJECT</span>
+                      </span>
+                    </div>
+                  </nuxt-link>
+                </li>
+                <li class="glMenu-wrapper-top__list--item">
+                  <nuxt-link to="#">ABOUT</nuxt-link>
+                </li>
+                <li class="glMenu-wrapper-top__list--item">
+                  <a href="#" target="_blank">BLOG</a>
+                </li>
+              </ul>
+            </div>
+            <!-- <div class="glMenu-wrapper-bottom">
+              <ul class="lMenu-wrapper-bottom__list">
+                <li class="lMenu-wrapper-bottom__list--item">
+                  <nuxt-link to="#">PROJECT</nuxt-link>
+                </li>
+                <li class="lMenu-wrapper-bottom__list--item">
+                  <nuxt-link to="#">ABOUT</nuxt-link>
+                </li>
+                <li class="lMenu-wrapper-bottom__list--item">
+                  <a href="#" target="_blank">BLOG</a>
+                </li>
+              </ul>
+            </div> -->
           </div>
         </div>
-        <div id="link-wrapper-menuClose" class="glMenu__close">
-          <div class="glMenu__close--g">CLOSE</div>
+        <div id="menu-close-btn" class="glMenu__close">
+          <div
+            class="glMenu__close--g"
+            @mouseover="mouseoverMenuClose"
+            @mouseleave="mouseleaveMenuClose">
+            <div id="link-wrapper-menuClose" class="link-wrapper-menu">
+              <span class="link-wrapper-menu__list link-wrapper-menu">
+                <span class="link-wrapper-menu__list--item">CLOSE</span>
+                <span class="link-wrapper-menu__list--item">CLOSE</span>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -53,25 +90,18 @@
 
 <script>
 import { gsap } from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// if (process.client) {
-//   gsap.registerPlugin(ScrollTrigger)
-// }
-// gsap.config({
-//   nullTargetWarn: false,
-// });
 
 /* eslint-disable */
 export default {
   name: 'TheHeader',
   computed: {
-    // TOPページかどうか
     isTopPage() {
       if (this.$route.name === 'index') return true
       return false
     },
   },
   mounted() {
+    // Set Fill Height
     this.$setFillHeight()
     let viewWindowWidth = window.innerWidth
     window.addEventListener('resize', () => {
@@ -79,6 +109,8 @@ export default {
       viewWindowWidth = window.innerWidth
       this.$setFillHeight()
     })
+
+    // Global Menu
     this.glMenu()
   },
   methods: {
@@ -91,17 +123,36 @@ export default {
       const linkWrapperMenuOpen = document.getElementById('link-wrapper-menuOpen')
       linkWrapperMenuOpen.classList.remove('isHover')
     },
-    // Global menu
+    mouseoverMenuClose() {
+      const linkWrapperMenuClose = document.getElementById('link-wrapper-menuClose')
+      linkWrapperMenuClose.classList.add('isHover')
+    },
+    mouseleaveMenuClose() {
+      const linkWrapperMenuClose = document.getElementById('link-wrapper-menuClose')
+      linkWrapperMenuClose.classList.remove('isHover')
+    },
+    mouseoverProject() {
+      const linkWrapperProject = document.getElementById('link-wrapper-project')
+      linkWrapperProject.classList.add('isHover')
+    },
+    mouseleaveProject() {
+      const linkWrapperProject = document.getElementById('link-wrapper-project')
+      linkWrapperProject.classList.remove('isHover')
+    },
+
+    // Global Menu
     glMenu() {
       const glMenu = document.getElementById('glMenu')
-      const linkWrapperMenuOpen = document.getElementById('link-wrapper-menuOpen')
-      const linkWrapperMenuClose = document.getElementById('link-wrapper-menuClose')
-      const shapeWrapper = document.getElementById('shape-wrapper')
+      const menuOpenBtn = document.getElementById('menu-open-btn')
+      const menuCloseBtn = document.getElementById('menu-close-btn')
+      const headerWrapper = document.getElementById('header-wrapper')
+      const wallPaperWrapper = document.getElementById('wallPaper-wrapper')
 
-      linkWrapperMenuOpen.addEventListener('click', function() {
+      // this -> アロー関数で指定するとトップレベルのthisを参照する
+      menuOpenBtn.addEventListener('click', () => {
         gsap.timeline()
           .killTweensOf(glMenu)
-          .killTweensOf(linkWrapperMenuClose)
+          .killTweensOf(menuCloseBtn)
           .set(glMenu, {
             display: 'block',
             x: '-100%'
@@ -109,17 +160,36 @@ export default {
           .to(glMenu, 0.5, {
             x: '0%',
             ease: 'Power3.easeIn',
-            onComplete: function() {
+            onComplete: () => {
               gsap.timeline()
-                .killTweensOf(linkWrapperMenuClose)
-                .to(linkWrapperMenuClose, 0.3, {
+                .killTweensOf(menuCloseBtn)
+                .to(menuCloseBtn, 0.3, {
                   opacity: 1,
                   ease: 'Power3.easeOut'
                 })
               }
           })
-        // this.$bodyScrollPrevent(true)
-        shapeWrapper.classList.add('isMenuOpen')
+        this.$bodyScrollPrevent(true)
+        headerWrapper.classList.add('isMenuOpen')
+        wallPaperWrapper.classList.add('isMenuOpen')
+      })
+
+      menuCloseBtn.addEventListener('click', () => {
+        gsap.timeline()
+          .killTweensOf(glMenu)
+          .killTweensOf(menuOpenBtn)
+          .to(glMenu, 0.4, {
+            delay: .2,
+            x: '-100%',
+            ease: 'Power2.easeIn',
+            onComplete: () => {
+              glMenu.style.display = 'none'
+            }
+          }
+        )
+        this.$bodyScrollPrevent(false)
+        headerWrapper.classList.remove('isMenuOpen')
+        wallPaperWrapper.classList.remove('isMenuOpen')
       })
     },
   },
@@ -142,11 +212,12 @@ export default {
 
   &__logo {
   cursor: pointer;
-  z-index: 99;
+  z-index: 98;
 
     &--image {
       width: auto;
       height: 4rem;
+      fill: $key-color-purple;
     }
   }
 
@@ -178,11 +249,49 @@ export default {
   }
   &__close {
     position: absolute;
-    width: 48px;
-    height: 48px;
-    top: 0;
-    right: 0;
+    top: calc(4rem + 1.25vw / 2); right: 4rem;
+    font-size: 1.25vw;
+    color: $key-color-white;
     opacity: 0;
   }
 }
+
+.header-wrapper.isMenuOpen {
+  z-index: 98;
+
+  .header-inner__logo--image {
+    fill: $key-color-white;
+  }
+}
+
+.glMenu-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: $key-color-white;
+}
+
+.glMenu-wrapper-top {
+
+  &__list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+
+    &--item {
+      margin-left: 6rem;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
 </style>

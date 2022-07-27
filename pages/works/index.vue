@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="child">
     <div class="childMainVisual">
       <div class="container container--lg">
@@ -7,7 +7,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container"> -->
       <!-- <ol class="row works">
         <li class="works__item">
           <nuxt-link to="/works/111" class="works__inner">
@@ -36,7 +36,7 @@
           </nuxt-link>
         </li>
       </ol> -->
-      <ol class="row works">
+      <!-- <ol class="row works">
           <li v-for="work in works.contents" :key="work.id" class="works__item">
             <nuxt-link :to="`/works/${work.id}/`" class="works__inner">
               <figure class="works__image">
@@ -58,9 +58,9 @@
         </ol>
     </div>
   </div>
-</template>
+</template> -->
 
-<script>
+<!-- <script>
 export default {
   async asyncData({ $microcms }) {
     const works = await $microcms.get({
@@ -72,4 +72,4 @@ export default {
     }
   },
 }
-</script>
+</script> -->
