@@ -109,7 +109,7 @@ export default {
           .to(glMenu, 0.5, {
             x: '0%',
             ease: 'Power3.easeIn',
-            onComplete: function() {
+            onComplete: () => {
               gsap.timeline()
                 .killTweensOf(linkWrapperMenuClose)
                 .to(linkWrapperMenuClose, 0.3, {

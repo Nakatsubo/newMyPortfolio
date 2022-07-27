@@ -65,7 +65,7 @@
     </p>
   </div>
 </template> -->
-<template>
+<!-- <template>
   <div class="child">
     <div class="worksMainVisual">
       <div class="container container--lg worksMainVisual__inner">
@@ -150,9 +150,9 @@
       >
     </p>
   </div>
-</template>
+</template> -->
 
-<script>
+<!-- <script>
 export default {
   async asyncData({ $microcms, params }) {
     const work = await $microcms.get({
@@ -163,4 +163,4 @@ export default {
     }
   },
 }
-</script>
+</script> -->

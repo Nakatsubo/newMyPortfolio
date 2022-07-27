@@ -40,6 +40,6 @@ const bodyScrollPrevent = (flag) => {
 
 // エクスポート
 export default (context, inject) => {
-  inject('bodyScrollPrevent', bodyScrollPrevent)
+  // inject('bodyScrollPrevent', bodyScrollPrevent)
   inject('setFillHeight', setFillHeight)
 }
