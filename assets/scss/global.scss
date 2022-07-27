@@ -188,3 +188,43 @@
     }
   }
 }
+
+.link-wrapper-glMenu {
+  height: 4.5vw;
+  overflow: hidden;
+  cursor: pointer;
+
+  &__list {
+    // margin-left: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    &--item {
+
+      &:last-of-type {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.link-wrapper-glMenu.isHover {
+
+  .link-wrapper-glMenu__list {
+
+    .link-wrapper-glMenu__list--item {
+      transition: $transition-primary;
+      transform: translateY(-100%);
+
+      &:first-of-type {
+        opacity: 0;
+      }
+
+      &:last-of-type {
+        opacity: 1;
+      }
+    }
+  }
+}

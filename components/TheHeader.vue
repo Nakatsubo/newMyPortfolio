@@ -30,21 +30,43 @@
 
       <div id="glMenu" class="glMenu">
         <div class="glMenu__scroll">
-          <div class="glMenu__scroll--content glMenu-wrapper">
-            <ul class="glMenu-wrapper__list">
-              <li class="glMenu-wrapper__list--item">
-                <nuxt-link to="#">PROJECT</nuxt-link>
-              </li>
-              <li class="glMenu-wrapper__list--item">
-                <nuxt-link to="#">ABOUT</nuxt-link>
-              </li>
-              <li class="glMenu-wrapper__list--item">
-                <a href="#" target="_blank">BLOG</a>
-              </li>
-              <li class="glMenu-wrapper__list--item">
-                <nuxt-link to="/#index-contact">CONTACT</nuxt-link>
-              </li>
-            </ul>
+          <div class="glMenu__scroll--content glMenu-wrapper isSerif">
+            <div class="glMenu-wrapper-top">
+              <ul class="glMenu-wrapper-top__list">
+                <li class="glMenu-wrapper-top__list--item" @mouseover="mouseoverProject" @mouseleave="mouseleaveProject">
+                  <nuxt-link
+                    to="#"
+                    class="glMenu-item-project"
+                    >
+                    <div id="link-wrapper-project" class="link-wrapper-glMenu">
+                      <span class="link-wrapper-glMenu__list">
+                        <span class="link-wrapper-glMenu__list--item">PROJECT</span>
+                        <span class="link-wrapper-glMenu__list--item">PROJECT</span>
+                      </span>
+                    </div>
+                  </nuxt-link>
+                </li>
+                <li class="glMenu-wrapper-top__list--item">
+                  <nuxt-link to="#">ABOUT</nuxt-link>
+                </li>
+                <li class="glMenu-wrapper-top__list--item">
+                  <a href="#" target="_blank">BLOG</a>
+                </li>
+              </ul>
+            </div>
+            <!-- <div class="glMenu-wrapper-bottom">
+              <ul class="lMenu-wrapper-bottom__list">
+                <li class="lMenu-wrapper-bottom__list--item">
+                  <nuxt-link to="#">PROJECT</nuxt-link>
+                </li>
+                <li class="lMenu-wrapper-bottom__list--item">
+                  <nuxt-link to="#">ABOUT</nuxt-link>
+                </li>
+                <li class="lMenu-wrapper-bottom__list--item">
+                  <a href="#" target="_blank">BLOG</a>
+                </li>
+              </ul>
+            </div> -->
           </div>
         </div>
         <div id="menu-close-btn" class="glMenu__close">
@@ -109,6 +131,15 @@ export default {
       const linkWrapperMenuClose = document.getElementById('link-wrapper-menuClose')
       linkWrapperMenuClose.classList.remove('isHover')
     },
+    mouseoverProject() {
+      const linkWrapperProject = document.getElementById('link-wrapper-project')
+      linkWrapperProject.classList.add('isHover')
+    },
+    mouseleaveProject() {
+      const linkWrapperProject = document.getElementById('link-wrapper-project')
+      linkWrapperProject.classList.remove('isHover')
+    },
+
     // Global Menu
     glMenu() {
       const glMenu = document.getElementById('glMenu')
@@ -230,6 +261,36 @@ export default {
 
   .header-inner__logo--image {
     fill: $key-color-white;
+  }
+}
+
+.glMenu-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: $key-color-white;
+}
+
+.glMenu-wrapper-top {
+
+  &__list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+
+    &--item {
+      margin-left: 6rem;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
   }
 }
 
