@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <TheShape />
+    <TheWallPaper />
     <TheHeader />
     <main class="main-wrapper">
       <Nuxt />

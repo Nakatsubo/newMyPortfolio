@@ -115,7 +115,7 @@ export default {
       const menuOpenBtn = document.getElementById('menu-open-btn')
       const menuCloseBtn = document.getElementById('menu-close-btn')
       const headerWrapper = document.getElementById('header-wrapper')
-      const shapeWrapper = document.getElementById('shape-wrapper')
+      const wallPaperWrapper = document.getElementById('wallPaper-wrapper')
 
       // this -> アロー関数で指定するとトップレベルのthisを参照する
       menuOpenBtn.addEventListener('click', () => {
@@ -140,7 +140,7 @@ export default {
           })
         this.$bodyScrollPrevent(true)
         headerWrapper.classList.add('isMenuOpen')
-        shapeWrapper.classList.add('isMenuOpen')
+        wallPaperWrapper.classList.add('isMenuOpen')
       })
 
       menuCloseBtn.addEventListener('click', () => {
@@ -158,7 +158,7 @@ export default {
         )
         this.$bodyScrollPrevent(false)
         headerWrapper.classList.remove('isMenuOpen')
-        shapeWrapper.classList.remove('isMenuOpen')
+        wallPaperWrapper.classList.remove('isMenuOpen')
       })
     },
   },
