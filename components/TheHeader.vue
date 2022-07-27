@@ -1,15 +1,20 @@
 <template>
-  <header class="header-wrapper">
+  <header id="header-wrapper" class="header-wrapper">
     <div class="header-wrapper__inner header-inner">
       <div class="header-wrapper__inner--logo header-inner__logo">
         <component :is="isTopPage ? 'h1' : 'p'">
           <nuxt-link to="/">
-            <object type="image/svg+xml" data="/img/logo.svg" class="header-inner__logo--image"></object>
+            <svg xmlns="http://www.w3.org/2000/svg" class="header-inner__logo--image" viewBox="0 0 50 50">
+              <title>YUSUKE NAKATSUBO</title>
+              <path d="M14.919,50 4.839,37.5 4.839,50z"/>
+              <path d="M14.919,3.125L4.839,0c0,1.983,0,7.324,0,9.375l30.242,37.5L45.161,50c0-1.983,0-7.324,0-9.375L14.919,3.125z"/>
+              <path d="M40.121,0c-2.513,0-7.569,0-10.081,0l10.081,6.25l5.04,6.25V0H40.121z"/>
+            </svg>
           </nuxt-link>
         </component>
       </div>
 
-      <div class="header-wrapper__inner--menu header-inner__menu">
+      <div id="menu-open-btn" class="header-wrapper__inner--menu header-inner__menu">
         <div
           class="header-inner__menu--g"
           @mouseover="mouseoverMenuOpen"
@@ -42,8 +47,18 @@
             </ul>
           </div>
         </div>
-        <div id="link-wrapper-menuClose" class="glMenu__close">
-          <div class="glMenu__close--g">CLOSE</div>
+        <div id="menu-close-btn" class="glMenu__close">
+          <div
+            class="glMenu__close--g"
+            @mouseover="mouseoverMenuClose"
+            @mouseleave="mouseleaveMenuClose">
+            <div id="link-wrapper-menuClose" class="link-wrapper-menu">
+              <span class="link-wrapper-menu__list link-wrapper-menu">
+                <span class="link-wrapper-menu__list--item">CLOSE</span>
+                <span class="link-wrapper-menu__list--item">CLOSE</span>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -53,25 +68,18 @@
 
 <script>
 import { gsap } from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// if (process.client) {
-//   gsap.registerPlugin(ScrollTrigger)
-// }
-// gsap.config({
-//   nullTargetWarn: false,
-// });
 
 /* eslint-disable */
 export default {
   name: 'TheHeader',
   computed: {
-    // TOPページかどうか
     isTopPage() {
       if (this.$route.name === 'index') return true
       return false
     },
   },
   mounted() {
+    // Set Fill Height
     this.$setFillHeight()
     let viewWindowWidth = window.innerWidth
     window.addEventListener('resize', () => {
@@ -79,6 +87,8 @@ export default {
       viewWindowWidth = window.innerWidth
       this.$setFillHeight()
     })
+
+    // Global Menu
     this.glMenu()
   },
   methods: {
@@ -91,17 +101,27 @@ export default {
       const linkWrapperMenuOpen = document.getElementById('link-wrapper-menuOpen')
       linkWrapperMenuOpen.classList.remove('isHover')
     },
-    // Global menu
+    mouseoverMenuClose() {
+      const linkWrapperMenuClose = document.getElementById('link-wrapper-menuClose')
+      linkWrapperMenuClose.classList.add('isHover')
+    },
+    mouseleaveMenuClose() {
+      const linkWrapperMenuClose = document.getElementById('link-wrapper-menuClose')
+      linkWrapperMenuClose.classList.remove('isHover')
+    },
+    // Global Menu
     glMenu() {
       const glMenu = document.getElementById('glMenu')
-      const linkWrapperMenuOpen = document.getElementById('link-wrapper-menuOpen')
-      const linkWrapperMenuClose = document.getElementById('link-wrapper-menuClose')
+      const menuOpenBtn = document.getElementById('menu-open-btn')
+      const menuCloseBtn = document.getElementById('menu-close-btn')
+      const headerWrapper = document.getElementById('header-wrapper')
       const shapeWrapper = document.getElementById('shape-wrapper')
 
-      linkWrapperMenuOpen.addEventListener('click', function() {
+      // this -> アロー関数で指定するとトップレベルのthisを参照する
+      menuOpenBtn.addEventListener('click', () => {
         gsap.timeline()
           .killTweensOf(glMenu)
-          .killTweensOf(linkWrapperMenuClose)
+          .killTweensOf(menuCloseBtn)
           .set(glMenu, {
             display: 'block',
             x: '-100%'
@@ -111,15 +131,34 @@ export default {
             ease: 'Power3.easeIn',
             onComplete: () => {
               gsap.timeline()
-                .killTweensOf(linkWrapperMenuClose)
-                .to(linkWrapperMenuClose, 0.3, {
+                .killTweensOf(menuCloseBtn)
+                .to(menuCloseBtn, 0.3, {
                   opacity: 1,
                   ease: 'Power3.easeOut'
                 })
               }
           })
-        // this.$bodyScrollPrevent(true)
+        this.$bodyScrollPrevent(true)
+        headerWrapper.classList.add('isMenuOpen')
         shapeWrapper.classList.add('isMenuOpen')
+      })
+
+      menuCloseBtn.addEventListener('click', () => {
+        gsap.timeline()
+          .killTweensOf(glMenu)
+          .killTweensOf(menuOpenBtn)
+          .to(glMenu, 0.4, {
+            delay: .2,
+            x: '-100%',
+            ease: 'Power2.easeIn',
+            onComplete: () => {
+              glMenu.style.display = 'none'
+            }
+          }
+        )
+        this.$bodyScrollPrevent(false)
+        headerWrapper.classList.remove('isMenuOpen')
+        shapeWrapper.classList.remove('isMenuOpen')
       })
     },
   },
@@ -142,11 +181,12 @@ export default {
 
   &__logo {
   cursor: pointer;
-  z-index: 99;
+  z-index: 98;
 
     &--image {
       width: auto;
       height: 4rem;
+      fill: $key-color-purple;
     }
   }
 
@@ -178,11 +218,19 @@ export default {
   }
   &__close {
     position: absolute;
-    width: 48px;
-    height: 48px;
-    top: 0;
-    right: 0;
+    top: calc(4rem + 1.25vw / 2); right: 4rem;
+    font-size: 1.25vw;
+    color: $key-color-white;
     opacity: 0;
   }
 }
+
+.header-wrapper.isMenuOpen {
+  z-index: 98;
+
+  .header-inner__logo--image {
+    fill: $key-color-white;
+  }
+}
+
 </style>

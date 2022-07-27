@@ -15,7 +15,13 @@
         </div>
       </div>
       <div class="introduction-arrow">
-        <object type="image/svg+xml" data="/img/arrow.svg" class="introduction-arrow__image"></object>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="3.4091" stroke-miterlimit="13.6364" viewBox="0 0 300 300" class="introduction-arrow__image">
+        <title>arrow</title>
+        <path d="M150.068,0,150.068,300"/>
+        <path d="M150.67,300,c0-68.945,47.052-126.903,110.795-143.512"/>
+        <path d="M38.67,156.488,C102.414,173.097,149.466,231.055,149.466,300"/>
+      </svg>
+
       </div>
     </section>
 
@@ -250,14 +256,11 @@ gsap.config({
   nullTargetWarn: false,
 });
 
-/* eslint-disable */
+// /* eslint-disable */
 export default {
   name: 'IndexPage',
-  // data() {
-  //   return {
-  //   }
-  // },
   mounted() {
+    // Set Fill Height
     this.$setFillHeight()
     let viewWindowWidth = window.innerWidth
     window.addEventListener('resize', () => {
@@ -269,7 +272,7 @@ export default {
     // Adobe Fonts
     this.$adobeFonts(document)
 
-    // Section transition
+    // Section Transition
     const sections = gsap.utils.toArray('.index-wrapper__section')
     const lists = gsap.utils.toArray('.index-wrapper__list--item')
 
@@ -289,7 +292,7 @@ export default {
         start: () => (i - 0.5) * innerHeight,
         end: () => (i + 0.5) * innerHeight,
         scrub: true,
-        markers: true,
+        // markers: true,
         toggleActions: 'play reset play reset',
         onToggle: self => self.isActive && setSection(section),
         onEnter: () => {
@@ -613,6 +616,7 @@ export default {
     max-width: 6.6rem;
     width: 100%;
     height: auto;
+    stroke: $key-color-black;
   }
 }
 

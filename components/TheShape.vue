@@ -17,6 +17,7 @@
   top: 0; right: 0; bottom: 0; left: 0;
   z-index: 0;
   overflow: hidden;
+  pointer-events: none;
 
   &__path {
     position: absolute;
@@ -46,7 +47,8 @@
 }
 
 .shape-wrapper.isMenuOpen {
-  z-index: 97;
+  // background-color: $key-color-darkgray;
+  z-index: 99;
 
   path {
     stroke: $key-color-white;
