@@ -539,7 +539,7 @@ export default {
       // font-weight: 600;
 
       @include mq() {
-        bottom: 8rem;
+        bottom: 12rem;
         font-size: 1.2rem;
       }
 
@@ -580,13 +580,18 @@ export default {
   }
 }
 
+// dark-mode
+html.dark-mode .index-wrapper__section--link::after {
+  border-top: 1px solid $key-color-white
+}
+
+
 // list
 .item-wrapper {
   padding: 1rem 1.5rem;
   margin-bottom: 0.5rem;
   font-size: 1vw;
   font-weight: 500;
-  color: $text-color-primary;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -611,6 +616,17 @@ export default {
   .item-wrapper__border {
     border-top: 2px solid $key-color-black;
   }
+}
+
+// dark-mode
+html.dark-mode .item-wrapper__border {
+  border-top: 1px solid $key-color-white;
+}
+html.dark-mode .item-wrapper.isActive {
+  border: 1px solid $key-color-white;
+}
+html.dark-mode .item-wrapper.isActive .item-wrapper__border {
+  border-top: 2px solid $key-color-white;
 }
 
 .section-inner {
@@ -686,6 +702,11 @@ export default {
     }
   }
 
+}
+
+// dark-mode
+html.dark-mode .section-inner__number--text .number-border {
+  border-top: 1px solid $key-color-white;
 }
 
 // introduction

@@ -55,6 +55,13 @@
   }
 }
 
+// dark-mode
+html.dark-mode .wallPaper-wrapper__path {
+  opacity: 0.4;
+}
+html.dark-mode .wallPaper-wrapper__path path {
+  stroke: $key-color-white;
+}
 
 @keyframes wallPaper01 {
   0% {
