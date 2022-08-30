@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* stylelint-disable */
+// /* stylelint-disable */
 .colorMode-wrapper {
   position: fixed;
   bottom: 4rem; right: 4rem;
@@ -43,6 +43,10 @@ export default {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+
+  @include mq() {
+    font-size: 1rem;
+  }
 
   &__color {
     width: 2rem;
