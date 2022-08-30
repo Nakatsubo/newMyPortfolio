@@ -6,6 +6,7 @@
       <Nuxt />
     </main>
     <TheFooter />
+    <TheColorMode />
   </div>
 </template>
 
@@ -13,6 +14,18 @@
 /* stylelint-disable */
 .container {
   position: relative;
+
+  // lightMode
+  &.lightMode {
+    background-color: $color-body-background-primary;
+    color: $text-color-primary;
+  }
+
+  // darkMode
+  &.darkMode {
+    background-color: $color-body-background-secondary;
+    color: $text-color-secondary;
+  }
 }
 
 .header-wrapper {

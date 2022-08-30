@@ -18,9 +18,6 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       // { rel: 'stylesheet', href: 'https://use.typekit.net/uzi1qtm.css' },
     ],
-    bodyAttrs: {
-      class: 'lightMode'
-    },
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -57,6 +54,7 @@ export default {
     '@nuxtjs/axios',
     'nuxt-webfontloader', // 追加
     'nuxt-microcms-module', // 追加
+    '@nuxtjs/color-mode', // 追加
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
