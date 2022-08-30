@@ -539,7 +539,7 @@ export default {
       // font-weight: 600;
 
       @include mq() {
-        bottom: 12rem;
+        bottom: 8rem;
         font-size: 1.2rem;
       }
 

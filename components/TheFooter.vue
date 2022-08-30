@@ -16,5 +16,9 @@
   left: 50%;
   transform: translateX(-50%);
 
+  @include mq() {
+    font-size: 1rem;
+  }
+
 }
 </style>
