@@ -30,7 +30,7 @@
 
       <div id="glMenu" class="glMenu">
         <div class="glMenu__scroll">
-          <div class="glMenu__scroll--content glMenu-wrapper isSerif">
+          <div class="glMenu__scroll--content glMenu-wrapper">
             <div class="glMenu-wrapper-top">
               <ul class="glMenu-wrapper-top__list">
                 <li class="glMenu-wrapper-top__list--item" @mouseover="mouseoverProject" @mouseleave="mouseleaveProject">
@@ -46,27 +46,33 @@
                     </div>
                   </nuxt-link>
                 </li>
-                <li class="glMenu-wrapper-top__list--item">
-                  <nuxt-link to="#">ABOUT</nuxt-link>
+                <li class="glMenu-wrapper-top__list--item" @mouseover="mouseoverAbout" @mouseleave="mouseleaveAbout">
+                  <nuxt-link
+                    to="#"
+                    class="glMenu-item-about"
+                    >
+                    <div id="link-wrapper-about" class="link-wrapper-glMenu">
+                      <span class="link-wrapper-glMenu__list">
+                        <span class="link-wrapper-glMenu__list--item">ABOUT</span>
+                        <span class="link-wrapper-glMenu__list--item">ABOUT</span>
+                      </span>
+                    </div>
+                  </nuxt-link>
                 </li>
-                <li class="glMenu-wrapper-top__list--item">
-                  <a href="#" target="_blank">BLOG</a>
+                <li class="glMenu-wrapper-top__list--item" @mouseover="mouseoverBlog" @mouseleave="mouseleaveBlog">
+                  <a
+                    href="#"
+                    target="_blank">
+                    <div id="link-wrapper-blog" class="link-wrapper-glMenu">
+                      <span class="link-wrapper-glMenu__list">
+                        <span class="link-wrapper-glMenu__list--item">BLOG</span>
+                        <span class="link-wrapper-glMenu__list--item">BLOG</span>
+                      </span>
+                    </div>
+                  </a>
                 </li>
               </ul>
             </div>
-            <!-- <div class="glMenu-wrapper-bottom">
-              <ul class="lMenu-wrapper-bottom__list">
-                <li class="lMenu-wrapper-bottom__list--item">
-                  <nuxt-link to="#">PROJECT</nuxt-link>
-                </li>
-                <li class="lMenu-wrapper-bottom__list--item">
-                  <nuxt-link to="#">ABOUT</nuxt-link>
-                </li>
-                <li class="lMenu-wrapper-bottom__list--item">
-                  <a href="#" target="_blank">BLOG</a>
-                </li>
-              </ul>
-            </div> -->
           </div>
         </div>
         <div id="menu-close-btn" class="glMenu__close">
@@ -138,6 +144,22 @@ export default {
     mouseleaveProject() {
       const linkWrapperProject = document.getElementById('link-wrapper-project')
       linkWrapperProject.classList.remove('isHover')
+    },
+    mouseoverAbout() {
+      const linkWrapperAbout = document.getElementById('link-wrapper-about')
+      linkWrapperAbout.classList.add('isHover')
+    },
+    mouseleaveAbout() {
+      const linkWrapperAbout = document.getElementById('link-wrapper-about')
+      linkWrapperAbout.classList.remove('isHover')
+    },
+    mouseoverBlog() {
+      const linkWrapperBlog = document.getElementById('link-wrapper-blog')
+      linkWrapperBlog.classList.add('isHover')
+    },
+    mouseleaveBlog() {
+      const linkWrapperBlog = document.getElementById('link-wrapper-blog')
+      linkWrapperBlog.classList.remove('isHover')
     },
 
     // Global Menu
@@ -223,6 +245,10 @@ export default {
 
   &__menu {
     font-size: 1.25vw;
+
+    @include mq() {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -235,6 +261,7 @@ export default {
   height: 100%;
   min-height: calc(var(--vh, 1vh) * 100);
   background-color: $key-color-darkgray;
+
   &__scroll {
     width: 100%;
     height: 100%;
@@ -247,13 +274,20 @@ export default {
       min-height: 100%;
     }
   }
+
   &__close {
     position: absolute;
     top: calc(4rem + 1.25vw / 2); right: 4rem;
     font-size: 1.25vw;
     color: $key-color-white;
     opacity: 0;
+
+    @include mq() {
+      top: 5.2rem;
+      font-size: 1.2rem;
+    }
   }
+
 }
 
 .header-wrapper.isMenuOpen {
@@ -284,10 +318,20 @@ export default {
     align-items: center;
     font-size: 3vw;
 
+    @include mq() {
+      flex-flow: column nowrap;
+      font-size: 2.4rem;
+    }
+
     &--item {
       margin-left: 6rem;
 
       &:first-of-type {
+        margin-left: 0;
+      }
+
+      @include mq() {
+        margin-bottom: 6rem;
         margin-left: 0;
       }
     }
