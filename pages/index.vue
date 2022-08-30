@@ -1,16 +1,23 @@
 <template>
   <div class="index-wrapper">
 
-    <section class="index-wrapper__section isFirst blue">
+    <section class="index-wrapper__section isFirst">
       <div class="index-wrapper__section--introduction section-inner introduction-wrapper">
+        <div class="section-inner__number blog-wrapper__number">
+          <p class="section-inner__number--text blog-wrapper__number--text">
+            01
+            <span class="number-border"></span>
+            05
+          </p>
+        </div>
         <div class="section-inner__title introduction-wrapper__greet">
           <h1 class="introduction-wrapper__greet--title isSerif">
             WELCOME TO<br>
-            THE WORKSPACE OF<br>
-            <span class="isDetail isColoring">YUSUKE NAKATSUBO</span>
+            THE WORKSPACE <br class="isSp">OF<br>
+            <span class="isDetail isColoring">YUSUKE <br class="isSp">NAKATSUBO</span>
           </h1>
            <p class="introduction-wrapper__greet--subtitle">
-             WEB DESIGNER, WEB DEVELOPER & WEB DIRECTER IN TOKYO.
+             WEB DESIGNER, WEB DEVELOPER & <br class="isSp">WEB DIRECTER IN TOKYO.
            </p>
         </div>
       </div>
@@ -25,8 +32,15 @@
       </div>
     </section>
 
-    <section class="index-wrapper__section red">
+    <section class="index-wrapper__section">
       <div class="index-wrapper__section--project section-inner project-wrapper">
+        <div class="section-inner__number blog-wrapper__number">
+          <p class="section-inner__number--text blog-wrapper__number--text">
+            02
+            <span class="number-border"></span>
+            05
+          </p>
+        </div>
         <div class="section-inner__title project-wrapper__title">
           <h1 class="section-inner__title--text project-wrapper--text">
             PROJECT
@@ -58,8 +72,15 @@
       </div>
     </section>
 
-    <section class="index-wrapper__section orange">
+    <section class="index-wrapper__section">
       <div class="index-wrapper__section--about section-inner about-wrapper">
+        <div class="section-inner__number blog-wrapper__number">
+          <p class="section-inner__number--text blog-wrapper__number--text">
+            03
+            <span class="number-border"></span>
+            05
+          </p>
+        </div>
         <div class="section-inner__title about-wrapper__title">
           <h1 class="section-inner__title--text about-wrapper__heading--text">
             ABOUT
@@ -91,8 +112,15 @@
       </div>
     </section>
 
-    <section class="index-wrapper__section purple">
+    <section class="index-wrapper__section">
       <div class="index-wrapper__section--blog section-inner blog-wrapper">
+        <div class="section-inner__number blog-wrapper__number">
+          <p class="section-inner__number--text blog-wrapper__number--text">
+            04
+            <span class="number-border"></span>
+            05
+          </p>
+        </div>
         <div class="section-inner__title blog-wrapper__title">
           <h1 class="section-inner__title--text blog-wrapper__title--text">
             BLOG
@@ -125,8 +153,15 @@
       </div> -->
     </section>
 
-    <section id="index-contact" class="index-wrapper__section green">
+    <section id="index-contact" class="index-wrapper__section">
       <div class="index-wrapper__section--contact section-inner contact-wrapper">
+        <div class="section-inner__number blog-wrapper__number">
+          <p class="section-inner__number--text blog-wrapper__number--text">
+            05
+            <span class="number-border"></span>
+            05
+          </p>
+        </div>
         <div class="section-inner__title contact-wrapper__title">
           <h1 class="section-inner__title--text contact-wrapper__title--text">
             CONTACT
@@ -317,6 +352,11 @@ export default {
             autoAlpha: 0,
             duration: 0.45
           })
+          .to(currentSection.querySelector('.section-inner__number'), {
+            y: -10,
+            autoAlpha: 0,
+            duration: 0.3
+          })
           .to(currentSection.querySelector('.section-inner__title'), {
             y: -10,
             autoAlpha: 0,
@@ -342,6 +382,15 @@ export default {
           .to(newSection, {
             autoAlpha: 1,
             duration: 0.45
+          })
+          .fromTo(newSection.querySelector('.section-inner__number'), {
+            y: 10,
+            autoAlpha: 0
+          },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.3
           })
           .fromTo(newSection.querySelector('.section-inner__title'), {
             y: 10,
@@ -488,6 +537,12 @@ export default {
       bottom: 16rem; right: 16rem;
       font-size: 1vw;
       // font-weight: 600;
+
+      @include mq() {
+        bottom: 8rem;
+        font-size: 1.2rem;
+      }
+
       &:after {
         position: absolute;
         top: 0.45vw;
@@ -498,7 +553,12 @@ export default {
         height: auto;
         border-top: 1px solid $key-color-black;
         margin-left: 0.5rem;
+
+        @include mq() {
+          top: 0.55rem;
+        }
       }
+
     }
 
     // sns
@@ -513,6 +573,10 @@ export default {
     position: fixed;
     bottom: 4rem; left: 4rem;
     z-index: 1;
+
+    @include mq() {
+      display: none;
+    }
   }
 }
 
@@ -558,14 +622,46 @@ export default {
   align-items: center;
   position: relative;
 
+  // number
+  &__number {
+    display: none;
+    position: fixed;
+    top: 12rem;
+    font-size: 4vw;
+
+    &--text {
+
+      .number-border {
+        display: inline-block;
+        content: '';
+        width: 2rem;
+        border-top: 1px solid $key-color-black;
+        padding-bottom: 1.25vw;
+        margin: 0 1rem;
+      }
+    }
+
+    @include mq() {
+      display: block;
+    }
+  }
+
   // title
   &__title {
     position: fixed;
     top: 12rem;
 
+    @include mq() {
+      top: 16rem;
+    }
+
     &--text {
       font-size: 2vw;
       font-weight: 500;
+
+      @include mq() {
+        font-size: 4vw;
+      }
     }
   }
 
@@ -574,12 +670,20 @@ export default {
     margin-bottom: 2rem;
     line-height: 1.25;
     font-size: 4.5vw;
+
+    @include mq() {
+      font-size: 6vw;
+    }
   }
 
   // body
   &__body {
-    line-height: 1.5;
+    line-height: 2;
     font-size: 1.5vw;
+
+    @include mq() {
+      font-size: 3vw;
+    }
   }
 
 }
@@ -593,16 +697,29 @@ export default {
     text-align: center;
     position: static;
 
+    @include mq() {
+      text-align: left;
+    }
+
     &--title {
       // line-height: 1.25;
       margin: 0 auto 2rem;
       font-size: 6vw;
+
+      @include mq() {
+        font-size: 9vw;
+      }
     }
 
     &--subtitle {
+      line-height: 1.5;
       margin: 2rem auto 0;
       font-size: 1.5vw;
       // font-weight: 600;
+
+      @include mq() {
+        font-size: 2.25vw;
+      }
     }
   }
 }
@@ -650,25 +767,11 @@ export default {
       &:first-of-type {
         margin-left: 0;
       }
+
+      @include mq() {
+        font-size: 1.2rem;
+      }
     }
   }
 }
-
-
-/* dummy colors */
-// .blue {
-//   background-color: blue;
-// }
-// .red {
-//   background-color: red;
-// }
-// .orange {
-//   background-color: orange;
-// }
-// .purple {
-//   background-color: purple;
-// }
-// .green {
-//   background-color: green;
-// }
 </style>

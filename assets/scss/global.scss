@@ -11,6 +11,14 @@
    color: $key-color-purple;
  }
 
+.isSp {
+  display: none;
+
+  @include mq() {
+    display: block;
+  }
+}
+
 // -------------------------------------------
 // Common Settings
 // -------------------------------------------
@@ -72,6 +80,10 @@
   overflow: hidden;
   cursor: pointer;
 
+  @include mq() {
+    height: 2.4rem;
+  }
+
   &__list {
     // margin-left: 1rem;
     display: flex;
@@ -112,6 +124,10 @@
   height: 1vw;
   overflow: hidden;
   cursor: pointer;
+
+  @include mq() {
+    height: 2.4rem;
+  }
 
   &__list {
     // margin-left: 1rem;
