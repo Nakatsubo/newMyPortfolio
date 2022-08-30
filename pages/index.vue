@@ -295,6 +295,7 @@ gsap.config({
 export default {
   name: 'IndexPage',
   mounted() {
+
     // Set Fill Height
     this.$setFillHeight()
     let viewWindowWidth = window.innerWidth
@@ -303,9 +304,6 @@ export default {
       viewWindowWidth = window.innerWidth
       this.$setFillHeight()
     })
-
-    // Adobe Fonts
-    this.$adobeFonts(document)
 
     // Section Transition
     const sections = gsap.utils.toArray('.index-wrapper__section')
