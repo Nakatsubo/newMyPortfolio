@@ -169,6 +169,7 @@ export default {
       const menuCloseBtn = document.getElementById('menu-close-btn')
       const headerWrapper = document.getElementById('header-wrapper')
       const wallPaperWrapper = document.getElementById('wallPaper-wrapper')
+      const linkWrapperGlMenu = document.getElementsByClassName('link-wrapper-glMenu')
 
       // this -> アロー関数で指定するとトップレベルのthisを参照する
       menuOpenBtn.addEventListener('click', () => {
@@ -213,6 +214,27 @@ export default {
         headerWrapper.classList.remove('isMenuOpen')
         wallPaperWrapper.classList.remove('isMenuOpen')
       })
+
+      for(let i = 0; i < linkWrapperGlMenu.length; i += 1) {
+        linkWrapperGlMenu[i].addEventListener('click', () => {
+          console.log('Hello, World')
+          gsap.timeline()
+            .killTweensOf(glMenu)
+            .killTweensOf(menuOpenBtn)
+            .to(glMenu, 0.4, {
+              delay: .2,
+              x: '-100%',
+              ease: 'Power2.easeIn',
+              onComplete: () => {
+                glMenu.style.display = 'none'
+              }
+            }
+          )
+          this.$bodyScrollPrevent(false)
+          headerWrapper.classList.remove('isMenuOpen')
+          wallPaperWrapper.classList.remove('isMenuOpen')
+        })
+      }
     },
   },
 }

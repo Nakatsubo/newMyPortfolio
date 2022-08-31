@@ -32,12 +32,12 @@ export default {
     // let followerSetX = gsap.quickSetter(mouseFollower, 'x', 'px')
     // let followerSetY = gsap.quickSetter(mouseFollower, 'y', 'px')
 
-    document.addEventListener('mousemove', function(e) {
+    document.addEventListener('mousemove', (e) => {
       mousePosition.x = e.pageX;
       mousePosition.y = e.pageY;
     })
 
-    gsap.ticker.add(function() {
+    gsap.ticker.add(() => {
       let dt = 1.0 - Math.pow(1.0 - mouseSpeed, gsap.ticker.deltaRatio())
 
       cursorPosition.x += (mousePosition.x - cursorPosition.x) * dt;
@@ -49,12 +49,12 @@ export default {
     })
 
     for(let i = 0; i < mouseLinks.length; i += 1) {
-      mouseLinks[i].addEventListener('mouseenter', function() {
-        mouseCursor.classList.add('isActive');
+      mouseLinks[i].addEventListener('mouseenter', () => {
+        mouseCursor.classList.add('isActive')
       })
 
-      mouseLinks[i].addEventListener('mouseleave', function() {
-        mouseCursor.classList.remove('isActive');
+      mouseLinks[i].addEventListener('mouseleave', () => {
+        mouseCursor.classList.remove('isActive')
       })
     }
 
