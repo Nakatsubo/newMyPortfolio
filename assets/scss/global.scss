@@ -37,7 +37,7 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: flex-start;
-  cursor: pointer;
+  // cursor: pointer;
 
   &__list {
     margin-left: 1rem;
@@ -78,7 +78,7 @@
 .link-wrapper-sns {
   height: 3vw;
   overflow: hidden;
-  cursor: pointer;
+  // cursor: pointer;
 
   @include mq() {
     height: 2.4rem;
@@ -123,7 +123,7 @@
 .link-wrapper-viewmore {
   height: 1vw;
   overflow: hidden;
-  cursor: pointer;
+  // cursor: pointer;
 
   @include mq() {
     height: 2.4rem;
@@ -168,7 +168,7 @@
 .link-wrapper-menu {
   height: 2.5vw;
   overflow: hidden;
-  cursor: pointer;
+  // cursor: pointer;
 
   @include mq() {
     height: 2.4rem;
@@ -212,7 +212,7 @@
 .link-wrapper-glMenu {
   height: 4.5vw;
   overflow: hidden;
-  cursor: pointer;
+  // cursor: pointer;
 
   @include mq() {
     height: 4.8rem;

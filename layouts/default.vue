@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <TheCursor />
     <TheWallPaper />
     <TheHeader />
     <main class="main-wrapper">
@@ -9,6 +10,21 @@
     <TheColorMode />
   </div>
 </template>
+
+<script>
+export default {
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+
+      // Adobe Fonts
+      this.$adobeFonts(document);
+
+      setTimeout(() => this.$nuxt.$loading.finish(), 500);
+    });
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 /* stylelint-disable */

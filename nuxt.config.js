@@ -74,12 +74,14 @@ export default {
     hoistUseStatements: true,
   },
 
+  // 追加
   // webfontloader: {
   //   google: {
   //     families: ['Ubuntu:wght@400,700&display=swap'],
   //   },
   // },
 
+  // 追加
   microcms: {
     options: {
       serviceDomain: process.env.SERVICE_DOMAIN,
@@ -87,5 +89,12 @@ export default {
     },
     mode: process.env.NODE_ENV === 'production' ? 'server' : 'all',
   },
+
+  // 追加
+  loadingIndicator: {
+    name: 'circle',
+    color: '#3B8070',
+    background: 'white'
+  }
 
 }
