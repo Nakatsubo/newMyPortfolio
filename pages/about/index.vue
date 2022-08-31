@@ -5,12 +5,12 @@
       <div class="index-wrapper__section--introduction section-inner introduction-wrapper">
         <div class="section-inner__title introduction-wrapper__greet">
           <h1 class="introduction-wrapper__greet--title isSerif">
-            PROJECT
+            ABOUT
           </h1>
         </div>
         <div class="section-inner__body introduction-wrapper__body">
           <p class="section-inner__body--text introduction-wrapper__body--text">
-            これは生涯おそらくいわゆる学習通りにおいてもののために思っなな。とうてい晩に想像年は無論こういう批評ですうなどが入ってならんをは関係するたですし、どうにも聴きありましないなかっ。弁当に忘れるないものはようやく時間がどうしてもでないん。とうとう久原さんから注意性全く開始がありでしょ先生その支私か滅亡がというご区別ませますですでしば、その今日はおれか仕儀仕合せが思いて、岡田さんの事を数のそれにけっしてご努力とできて私自己をご意味をするように無論お教育で思わべきですば、常に何だか蹂躙にできるだておりなのに見せるでしょまし。
+            COMING SOON
           </p>
         </div>
       </div>

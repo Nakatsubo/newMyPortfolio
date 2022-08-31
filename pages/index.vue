@@ -98,8 +98,8 @@
         </div>
       </div>
       <div class="index-wrapper__section--link">
-        <a
-          href="#"
+        <nuxt-link
+          to="/about"
           @mouseover="mouseoverAbout"
           @mouseleave="mouseleaveAbout">
           <div id="link-wrapper-about" class="link-wrapper-viewmore mouse-link">
@@ -108,7 +108,7 @@
               <span class="link-wrapper-viewmore__list--item">VIEW MORE</span>
             </span>
           </div>
-        </a>
+        </nuxt-link>
       </div>
     </section>
 
