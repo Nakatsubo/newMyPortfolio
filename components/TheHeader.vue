@@ -35,7 +35,7 @@
               <ul class="glMenu-wrapper-top__list">
                 <li class="glMenu-wrapper-top__list--item" @mouseover="mouseoverProject" @mouseleave="mouseleaveProject">
                   <nuxt-link
-                    to="#"
+                    to="/project"
                     class="glMenu-item-project"
                     >
                     <div id="link-wrapper-project" class="link-wrapper-glMenu mouse-link">
