@@ -1,7 +1,7 @@
 <template>
   <div class="colorMode-wrapper">
     <div class="colorMode-wrapper__color"></div>
-    <div class="colorMode-wrapper__btn">
+    <div class="colorMode-wrapper__btn mouse-link">
       <input id="toggle" v-model="isDarkMode" class="toggle-input" type='checkbox' @change="toggleColorMode" />
       <label for="toggle" class="toggle-label" />
       <div id="toggle-text" class="toggle-text">DARK</div>
@@ -76,7 +76,7 @@ export default {
       margin-bottom: 1rem;
       background-color: $key-color-lightgray;
       transition: $transition-primary;
-      cursor: pointer;
+      // cursor: pointer;
       position: relative;
 
       &:after {

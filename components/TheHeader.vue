@@ -1,7 +1,7 @@
 <template>
   <header id="header-wrapper" class="header-wrapper">
-    <div class="header-wrapper__inner header-inner">
-      <div class="header-wrapper__inner--logo header-inner__logo">
+    <div class="header-wrapper__inner header-inner mouse-link">
+      <div class="header-wrapper__inner--logo header-inner__logo mouse-link">
         <component :is="isTopPage ? 'h1' : 'p'">
           <nuxt-link to="/">
             <svg xmlns="http://www.w3.org/2000/svg" class="header-inner__logo--image" viewBox="0 0 50 50">
@@ -14,7 +14,7 @@
         </component>
       </div>
 
-      <div id="menu-open-btn" class="header-wrapper__inner--menu header-inner__menu">
+      <div id="menu-open-btn" class="header-wrapper__inner--menu header-inner__menu mouse-link">
         <div
           class="header-inner__menu--g"
           @mouseover="mouseoverMenuOpen"
@@ -38,7 +38,7 @@
                     to="#"
                     class="glMenu-item-project"
                     >
-                    <div id="link-wrapper-project" class="link-wrapper-glMenu">
+                    <div id="link-wrapper-project" class="link-wrapper-glMenu mouse-link">
                       <span class="link-wrapper-glMenu__list">
                         <span class="link-wrapper-glMenu__list--item">PROJECT</span>
                         <span class="link-wrapper-glMenu__list--item">PROJECT</span>
@@ -51,7 +51,7 @@
                     to="#"
                     class="glMenu-item-about"
                     >
-                    <div id="link-wrapper-about" class="link-wrapper-glMenu">
+                    <div id="link-wrapper-about" class="link-wrapper-glMenu mouse-link">
                       <span class="link-wrapper-glMenu__list">
                         <span class="link-wrapper-glMenu__list--item">ABOUT</span>
                         <span class="link-wrapper-glMenu__list--item">ABOUT</span>
@@ -63,7 +63,7 @@
                   <a
                     href="#"
                     target="_blank">
-                    <div id="link-wrapper-blog" class="link-wrapper-glMenu">
+                    <div id="link-wrapper-blog" class="link-wrapper-glMenu mouse-link">
                       <span class="link-wrapper-glMenu__list">
                         <span class="link-wrapper-glMenu__list--item">BLOG</span>
                         <span class="link-wrapper-glMenu__list--item">BLOG</span>
@@ -75,7 +75,7 @@
             </div>
           </div>
         </div>
-        <div id="menu-close-btn" class="glMenu__close">
+        <div id="menu-close-btn" class="glMenu__close mouse-link">
           <div
             class="glMenu__close--g"
             @mouseover="mouseoverMenuClose"
@@ -233,7 +233,7 @@ export default {
   align-items: center;
 
   &__logo {
-  cursor: pointer;
+  // cursor: pointer;
   z-index: 98;
 
     &--image {

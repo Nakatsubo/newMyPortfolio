@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <TheCursor />
     <TheWallPaper />
     <TheHeader />
     <main class="main-wrapper">
@@ -14,14 +15,14 @@
 export default {
   mounted() {
     this.$nextTick(() => {
-      this.$nuxt.$loading.start()
+      this.$nuxt.$loading.start();
 
       // Adobe Fonts
-      this.$adobeFonts(document)
+      this.$adobeFonts(document);
 
-      setTimeout(() => this.$nuxt.$loading.finish(), 500)
-    })
-  }
+      setTimeout(() => this.$nuxt.$loading.finish(), 500);
+    });
+  },
 }
 </script>
 

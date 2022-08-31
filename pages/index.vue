@@ -62,7 +62,7 @@
           href="#"
           @mouseover="mouseoverProject"
           @mouseleave="mouseleaveProject">
-          <div id="link-wrapper-project" class="link-wrapper-viewmore">
+          <div id="link-wrapper-project" class="link-wrapper-viewmore mouse-link">
             <span class="link-wrapper-viewmore__list">
               <span class="link-wrapper-viewmore__list--item">VIEW MORE</span>
               <span class="link-wrapper-viewmore__list--item">VIEW MORE</span>
@@ -102,7 +102,7 @@
           href="#"
           @mouseover="mouseoverAbout"
           @mouseleave="mouseleaveAbout">
-          <div id="link-wrapper-about" class="link-wrapper-viewmore">
+          <div id="link-wrapper-about" class="link-wrapper-viewmore mouse-link">
             <span class="link-wrapper-viewmore__list">
               <span class="link-wrapper-viewmore__list--item">VIEW MORE</span>
               <span class="link-wrapper-viewmore__list--item">VIEW MORE</span>
@@ -173,7 +173,7 @@
             class="section-inner__heading--text contact-wrapper__heading--text isSerif"
             @mouseover="mouseoverContact"
             @mouseleave="mouseleaveContact">
-            <div id="link-wrapper-contact" class="link-wrapper-contact">
+            <div id="link-wrapper-contact" class="link-wrapper-contact mouse-link">
               <span>DROP ME AN</span>
               <span class="link-wrapper-contact__list isColoring">
                 <span class="link-wrapper-contact__list--item">MAIL FORM</span>
@@ -192,7 +192,7 @@
               class="sns-item-linkedin"
               @mouseover="mouseoverLinkedin"
               @mouseleave="mouseleaveLinkedin">
-              <div id="link-wrapper-linkedin" class="link-wrapper-sns">
+              <div id="link-wrapper-linkedin" class="link-wrapper-sns mouse-link">
                 <span class="link-wrapper-sns__list">
                   <span class="link-wrapper-sns__list--item">LINKEDIN</span>
                   <span class="link-wrapper-sns__list--item">LINKEDIN</span>
@@ -207,7 +207,7 @@
               class="sns-item-facebbook"
               @mouseover="mouseoverFacebook"
               @mouseleave="mouseleaveFacebook">
-              <div id="link-wrapper-facebook" class="link-wrapper-sns">
+              <div id="link-wrapper-facebook" class="link-wrapper-sns mouse-link">
                 <span class="link-wrapper-sns__list">
                   <span class="link-wrapper-sns__list--item">FACEBOOK</span>
                   <span class="link-wrapper-sns__list--item">FACEBOOK</span>
@@ -222,7 +222,7 @@
               class="sns-item-twitter"
               @mouseover="mouseoverTwitter"
               @mouseleave="mouseleaveTwitter">
-              <div id="link-wrapper-twitter" class="link-wrapper-sns">
+              <div id="link-wrapper-twitter" class="link-wrapper-sns mouse-link">
                 <span class="link-wrapper-sns__list">
                   <span class="link-wrapper-sns__list--item">TWITTER</span>
                   <span class="link-wrapper-sns__list--item">TWITTER</span>
@@ -237,7 +237,7 @@
               class="sns-item-instagram"
               @mouseover="mouseoverInstagram"
               @mouseleave="mouseleaveInstagram">
-              <div id="link-wrapper-instagram" class="link-wrapper-sns">
+              <div id="link-wrapper-instagram" class="link-wrapper-sns mouse-link">
                 <span class="link-wrapper-sns__list">
                   <span class="link-wrapper-sns__list--item">INSTAGRAM</span>
                   <span class="link-wrapper-sns__list--item">INSTAGRAM</span>
