@@ -43,7 +43,7 @@
         <ul class="index-wrapper__section--sns-wrapper__sns-list sns-wrapper__sns-list">
           <li class="sns-wrapper__sns-list--item">
             <a
-              href="#"
+              href="https://www.linkedin.com/in/office-yusuke-nakatsubo-736ba924a/"
               target="_blank"
               class="sns-item-linkedin"
               @mouseover="mouseoverLinkedin"
@@ -58,7 +58,7 @@
           </li>
           <li class="sns-wrapper__sns-list--item">
             <a
-              href="#"
+              href="https://www.facebook.com/office.yusuke.nakatsubo"
               target="_blank"
               class="sns-item-facebbook"
               @mouseover="mouseoverFacebook"
@@ -73,7 +73,7 @@
           </li>
           <li class="sns-wrapper__sns-list--item">
             <a
-              href="#"
+              href="https://twitter.com/office_y_n"
               target="_blank"
               class="sns-item-twitter"
               @mouseover="mouseoverTwitter"
@@ -88,7 +88,7 @@
           </li>
           <li class="sns-wrapper__sns-list--item">
             <a
-              href="#"
+              href="https://www.instagram.com/office.yusuke.nakatsubo/"
               target="_blank"
               class="sns-item-instagram"
               @mouseover="mouseoverInstagram"
