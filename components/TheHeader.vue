@@ -1,7 +1,7 @@
 <template>
   <header id="header-wrapper" class="header-wrapper">
     <div class="header-wrapper__inner header-inner mouse-link">
-      <div class="header-wrapper__inner--logo header-inner__logo mouse-link">
+      <div class="header-wrapper__inner--logo header-inner__logo link-wrapper-glMenu mouse-link">
         <component :is="isTopPage ? 'h1' : 'p'">
           <nuxt-link to="/">
             <svg xmlns="http://www.w3.org/2000/svg" class="header-inner__logo--image" viewBox="0 0 50 50">
