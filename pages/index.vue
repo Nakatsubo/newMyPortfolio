@@ -756,6 +756,11 @@ html.dark-mode .section-inner__number--text .number-border {
   }
 }
 
+// dark-mode
+html.dark-mode .introduction-arrow__image {
+  stroke: $key-color-white;
+}
+
 // contact
 .contact-wrapper {
 

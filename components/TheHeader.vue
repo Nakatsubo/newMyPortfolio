@@ -60,16 +60,17 @@
                   </nuxt-link>
                 </li>
                 <li class="glMenu-wrapper-top__list--item" @mouseover="mouseoverBlog" @mouseleave="mouseleaveBlog">
-                  <a
-                    href="#"
-                    target="_blank">
+                  <nuxt-link
+                    to="/blog"
+                    class="glMenu-item-blog"
+                    >
                     <div id="link-wrapper-blog" class="link-wrapper-glMenu mouse-link">
                       <span class="link-wrapper-glMenu__list">
                         <span class="link-wrapper-glMenu__list--item">BLOG</span>
                         <span class="link-wrapper-glMenu__list--item">BLOG</span>
                       </span>
                     </div>
-                  </a>
+                  </nuxt-link>
                 </li>
               </ul>
             </div>
@@ -217,7 +218,6 @@ export default {
 
       for(let i = 0; i < linkWrapperGlMenu.length; i += 1) {
         linkWrapperGlMenu[i].addEventListener('click', () => {
-          console.log('Hello, World')
           gsap.timeline()
             .killTweensOf(glMenu)
             .killTweensOf(menuOpenBtn)
