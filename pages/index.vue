@@ -48,12 +48,16 @@
         </div>
         <div class="section-inner__heading project-wrapper__heading">
           <p class="section-inner__heading--text project-wrapper__heading--text isSerif">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Your creative web development partner.
           </p>
         </div>
         <div class="section-inner__body project-wrapper__body">
           <p class="section-inner__body--text project-wrapper__body--text">
-            これは生涯おそらくいわゆる学習通りにおいてもののために思っなな。とうてい晩に想像年は無論こういう批評ですうなどが入ってならんをは関係するたですし、どうにも聴きありましないなかっ。弁当に忘れるないものはようやく時間がどうしてもでないん。とうとう久原さんから注意性全く開始がありでしょ先生その支私か滅亡がというご区別ませますですでしば、その今日はおれか仕儀仕合せが思いて、岡田さんの事を数のそれにけっしてご努力とできて私自己をご意味をするように無論お教育で思わべきですば、常に何だか蹂躙にできるだておりなのに見せるでしょまし。
+            デジタル領域をコアとした、クライアント様の課題解決やビジネスチャンスのサポートをさせていただきます。<br>
+            Webコンテンツのプランニングから、クリエイティブ、PDCAサイクルに則った継続的な改善まで一気通貫で実行します。
+            また、課題やビジネスに応じて動画コンテンツの制作も実行します。<br>
+            多種多様な業界の、ブランドサイト、プロモーションサイト、会員制サイト、オウンドメディア、LPなどの制作実績がございますので、
+            クライアント様の目的に応じた最適な形をご提案します。
           </p>
         </div>
       </div>
@@ -537,7 +541,7 @@ export default {
       // font-weight: 600;
 
       @include mq() {
-        bottom: 8rem;
+        bottom: 12rem;
         font-size: 1.2rem;
       }
 
@@ -693,6 +697,7 @@ html.dark-mode .item-wrapper.isActive .item-wrapper__border {
   // body
   &__body {
     line-height: 2;
+    text-align: left;
     font-size: 1.5vw;
 
     @include mq() {
