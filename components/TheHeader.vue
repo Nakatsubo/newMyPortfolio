@@ -353,8 +353,12 @@ export default {
       }
 
       @include mq() {
-        margin-bottom: 6rem;
+        margin-bottom: 3rem;
         margin-left: 0;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
       }
     }
   }
