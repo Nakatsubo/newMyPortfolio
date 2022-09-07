@@ -77,6 +77,10 @@ export default {
     opacity: 0.2;
     z-index: 101;
 
+    @include mq() {
+      display: none;
+    }
+
     &.isActive {
       width: 4rem;
       height: 4rem;
