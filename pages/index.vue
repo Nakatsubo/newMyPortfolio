@@ -54,10 +54,10 @@
         <div class="section-inner__body project-wrapper__body">
           <p class="section-inner__body--text project-wrapper__body--text">
             デジタル領域をコアとした、クライアント様の課題解決やビジネスチャンスのサポートをさせていただきます。<br>
-            Webコンテンツのプランニングから、クリエイティブ、PDCAサイクルに則った継続的な改善まで一気通貫で実行します。
-            また、課題やビジネスに応じて動画コンテンツの制作も実行します。<br>
+            Webコンテンツのプランニングから、クリエイティブ、PDCAサイクルに則った継続的な改善まで一気通貫で実行いたします。
+            また、課題やビジネスに応じて動画コンテンツの制作も可能です。<br>
             多種多様な業界の、ブランドサイト、プロモーションサイト、会員制サイト、オウンドメディア、LPなどの制作実績がございますので、
-            クライアント様の目的に応じた最適な形をご提案します。
+            クライアント様の目的に応じた最適な形をご提案いたします。
           </p>
         </div>
       </div>
@@ -92,12 +92,16 @@
         </div>
         <div class="section-inner__heading about-wrapper__heading">
            <p class="section-inner__heading--text about-wrapper__heading--text isSerif">
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Engaging, purposeful, and creative.
            </p>
         </div>
         <div class="section-inner__body about-wrapper__body">
           <p class="section-inner__body--text about-wrapper__body--text">
-            これは生涯おそらくいわゆる学習通りにおいてもののために思っなな。とうてい晩に想像年は無論こういう批評ですうなどが入ってならんをは関係するたですし、どうにも聴きありましないなかっ。弁当に忘れるないものはようやく時間がどうしてもでないん。とうとう久原さんから注意性全く開始がありでしょ先生その支私か滅亡がというご区別ませますですでしば、その今日はおれか仕儀仕合せが思いて、岡田さんの事を数のそれにけっしてご努力とできて私自己をご意味をするように無論お教育で思わべきですば、常に何だか蹂躙にできるだておりなのに見せるでしょまし。
+            映像のポストプロダクションを経て、Web制作会社へジョイン。
+            プロダクションマネージャー、ディレクターとして、多種多様な業界のクライアント様のデジタル領域制作を担い、実績を積みました。<br>
+            並行して、デザイン、フロントエンド開発、バックエンド構築、動画制作などの業務を実行し、制作スキル一式をブラッシュアップ。
+            経験を買われデザイナー兼エンジニアとして移籍。<br>
+            数社を経て、現在はフリーランスのWeb制作をメインに活動しています。
           </p>
         </div>
       </div>
