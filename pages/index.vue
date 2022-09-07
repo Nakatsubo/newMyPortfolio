@@ -538,7 +538,7 @@ export default {
       position: absolute;
       bottom: 16rem; right: 16rem;
       font-size: 1vw;
-      // font-weight: 600;
+      font-weight: 600;
 
       @include mq() {
         bottom: 12rem;
@@ -685,11 +685,12 @@ html.dark-mode .item-wrapper.isActive .item-wrapper__border {
 
   // heading
   &__heading {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     line-height: 1.25;
-    font-size: 4.5vw;
+    font-size: 3vw;
 
     @include mq() {
+      margin-bottom: 2rem;
       font-size: 6vw;
     }
   }
@@ -726,7 +727,7 @@ html.dark-mode .section-inner__number--text .number-border {
     }
 
     &--title {
-      // line-height: 1.25;
+      // line-height: 1;
       margin: 0 auto 2rem;
       font-size: 6vw;
 
@@ -738,7 +739,7 @@ html.dark-mode .section-inner__number--text .number-border {
     &--subtitle {
       line-height: 1.5;
       margin: 2rem auto 0;
-      font-size: 1.5vw;
+      font-size: 1vw;
       // font-weight: 600;
 
       @include mq() {
