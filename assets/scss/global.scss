@@ -120,7 +120,6 @@
 .link-wrapper-viewmore {
   height: 1vw;
   overflow: hidden;
-  // cursor: pointer;
 
   @include mq() {
     height: 2.4rem;
@@ -164,7 +163,6 @@
 .link-wrapper-menu {
   height: 2.5vw;
   overflow: hidden;
-  // cursor: pointer;
 
   @include mq() {
     height: 2.4rem;
@@ -208,7 +206,6 @@
 .link-wrapper-glMenu {
   height: 4.5vw;
   overflow: hidden;
-  // cursor: pointer;
 
   @include mq() {
     height: 4.8rem;

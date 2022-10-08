@@ -76,7 +76,6 @@ export default {
       margin-bottom: 1rem;
       background-color: $key-color-lightgray;
       transition: $transition-primary;
-      // cursor: pointer;
       position: relative;
 
       &:after {
