@@ -91,10 +91,6 @@ export default {
   },
 
   // 追加
-  loadingIndicator: {
-    name: 'circle',
-    color: '#3B8070',
-    background: 'white'
-  }
+  // isLoad: './components/TheLoader.vue',
 
 }

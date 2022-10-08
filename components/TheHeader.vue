@@ -98,7 +98,6 @@
 <script>
 import { gsap } from 'gsap';
 
-/* eslint-disable */
 export default {
   name: 'TheHeader',
   computed: {
@@ -241,7 +240,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* stylelint-disable */
 
 .header-wrapper {
   position: fixed;
@@ -256,6 +254,10 @@ export default {
 
   &__logo {
   z-index: 98;
+
+    a {
+      display: inline-block;
+    }
 
     &--image {
       width: auto;

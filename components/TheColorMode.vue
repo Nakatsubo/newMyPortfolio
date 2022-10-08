@@ -10,7 +10,6 @@
 </template>
 
 <script>
-// /* eslint-disable */
 export default {
   data() {
     return {
@@ -34,7 +33,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// /* stylelint-disable */
 .colorMode-wrapper {
   position: fixed;
   bottom: 4rem; right: 4rem;
@@ -76,8 +74,8 @@ export default {
       margin-bottom: 1rem;
       background-color: $key-color-lightgray;
       transition: $transition-primary;
-      // cursor: pointer;
       position: relative;
+      cursor: pointer;
 
       &:after {
         content: '';

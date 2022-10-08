@@ -290,19 +290,21 @@
 
 <script>
 // gsap
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 if (process.client) {
   gsap.registerPlugin(ScrollTrigger)
 }
 gsap.config({
   nullTargetWarn: false,
-});
+})
 
 // /* eslint-disable */
 export default {
   name: 'IndexPage',
   mounted() {
+    // // Adobe Fonts
+    // this.$adobeFonts(document)
 
     // Set Fill Height
     this.$setFillHeight()
@@ -613,12 +615,6 @@ html.dark-mode .index-wrapper__section--link::after {
   &.isActive {
     border: 1px solid $key-color-black;
     border-radius: 16.5rem;
-  }
-}
-
-.item-wrapper.isActive {
-  .item-wrapper__border {
-    border-top: 2px solid $key-color-black;
   }
 }
 

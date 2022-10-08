@@ -8,20 +8,34 @@
     </main>
     <TheFooter />
     <TheColorMode />
+    <TheLoader v-if="isLoaded" />
   </div>
 </template>
 
 <script>
+import TheLoader from '~/components/TheLoader.vue'
 export default {
+  components: {
+    TheLoader,
+  },
+  data() {
+    return {
+      isLoaded: true,
+    }
+  },
   mounted() {
     this.$nextTick(() => {
-      this.$nuxt.$loading.start();
-
       // Adobe Fonts
-      this.$adobeFonts(document);
+      this.$adobeFonts(document)
 
-      setTimeout(() => this.$nuxt.$loading.finish(), 500);
-    });
+      if (document.getElementsByTagName('html')[0].classList.contains('wf-active')) {
+        this.isLoaded = false
+      }
+
+      setTimeout(() => {
+        this.isLoaded = false
+      }, 3000)
+    })
   },
 }
 </script>
