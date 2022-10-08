@@ -7,19 +7,6 @@
 <script>
 export default {
   name: 'TheLoader',
-  data() {
-    return {
-      isLoad: false
-    }
-  },
-  methods: {
-    LoaderStart() {
-      this.isLoad = true
-    },
-    LoaderEnd() {
-      this.isLoad = false
-    }
-  }
 }
 </script>
 

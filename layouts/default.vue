@@ -25,12 +25,16 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-       // Adobe Fonts
+      // Adobe Fonts
       this.$adobeFonts(document)
+
+      if (document.getElementsByTagName('html')[0].classList.contains('wf-active')) {
+        this.isLoaded = false
+      }
 
       setTimeout(() => {
         this.isLoaded = false
-      }, 700)
+      }, 3000)
     })
   },
 }
