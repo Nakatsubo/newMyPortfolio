@@ -8,14 +8,30 @@
     </main>
     <TheFooter />
     <TheColorMode />
+    <TheLoader v-if="isLoaded" />
   </div>
 </template>
 
 <script>
+import TheLoader from '~/components/TheLoader.vue'
 export default {
+  components: {
+    TheLoader,
+  },
+  data() {
+    return {
+      isLoaded: true,
+    }
+  },
   mounted() {
-    // Adobe Fonts
-    this.$adobeFonts(document);
+    this.$nextTick(() => {
+       // Adobe Fonts
+      this.$adobeFonts(document)
+
+      setTimeout(() => {
+        this.isLoaded = false
+      }, 700)
+    })
   },
 }
 </script>

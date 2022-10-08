@@ -290,19 +290,21 @@
 
 <script>
 // gsap
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 if (process.client) {
   gsap.registerPlugin(ScrollTrigger)
 }
 gsap.config({
   nullTargetWarn: false,
-});
+})
 
 // /* eslint-disable */
 export default {
   name: 'IndexPage',
   mounted() {
+    // // Adobe Fonts
+    // this.$adobeFonts(document)
 
     // Set Fill Height
     this.$setFillHeight()
