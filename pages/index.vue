@@ -616,12 +616,6 @@ html.dark-mode .index-wrapper__section--link::after {
   }
 }
 
-.item-wrapper.isActive {
-  .item-wrapper__border {
-    border-top: 2px solid $key-color-black;
-  }
-}
-
 // dark-mode
 html.dark-mode .item-wrapper__border {
   border-top: 1px solid $key-color-white;
