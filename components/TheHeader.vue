@@ -255,7 +255,6 @@ export default {
   align-items: center;
 
   &__logo {
-  // cursor: pointer;
   z-index: 98;
 
     &--image {

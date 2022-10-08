@@ -403,7 +403,6 @@ export default {
       line-height: 1.5;
       margin: 2rem auto 0;
       font-size: 1.5vw;
-      // font-weight: 600;
 
       @include mq() {
         font-size: 2.25vw;
@@ -432,7 +431,6 @@ export default {
     &--item {
       margin-left: 2rem;
       font-size: 1.5vw;
-      font-weight: 600;
 
       &:first-of-type {
         margin-left: 0;
