@@ -14,14 +14,8 @@
 <script>
 export default {
   mounted() {
-    this.$nextTick(() => {
-      this.$nuxt.$loading.start();
-
-      // Adobe Fonts
-      this.$adobeFonts(document);
-
-      setTimeout(() => this.$nuxt.$loading.finish(), 500);
-    });
+    // Adobe Fonts
+    this.$adobeFonts(document);
   },
 }
 </script>
