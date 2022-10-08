@@ -27,7 +27,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* stylelint-disable */
 .container {
   position: relative;
 

@@ -542,7 +542,6 @@ export default {
       position: absolute;
       bottom: 16rem; right: 16rem;
       font-size: 1vw;
-      font-weight: 600;
 
       @include mq() {
         bottom: 12rem;
@@ -614,7 +613,6 @@ html.dark-mode .index-wrapper__section--link::after {
   &.isActive {
     border: 1px solid $key-color-black;
     border-radius: 16.5rem;
-    font-weight: 600;
   }
 }
 
@@ -744,7 +742,6 @@ html.dark-mode .section-inner__number--text .number-border {
       line-height: 1.5;
       margin: 2rem auto 0;
       font-size: 1vw;
-      // font-weight: 600;
 
       @include mq() {
         font-size: 2.25vw;
@@ -777,11 +774,6 @@ html.dark-mode .introduction-arrow__image {
   &__heading {
     margin-bottom: 0;
     font-size: 6vw;
-
-    // &--text {
-    //   height: 6vw;
-    //   overflow: hidden;
-    // }
   }
 }
 
@@ -796,7 +788,6 @@ html.dark-mode .introduction-arrow__image {
     &--item {
       margin-left: 2rem;
       font-size: 1.5vw;
-      font-weight: 600;
 
       &:first-of-type {
         margin-left: 0;
