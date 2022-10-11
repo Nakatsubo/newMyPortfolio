@@ -99,13 +99,17 @@ html.dark-mode .index-wrapper__section--link::after {
 // list
 .item-wrapper {
   padding: 1rem 1.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 1vw;
+  margin-bottom: 0.4rem;
+  font-size: max(0.8vw, 0.8rem);
   font-weight: 500;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   &__border {
     width: 0.5rem;
@@ -231,7 +235,7 @@ html.dark-mode .section-inner__number--text .number-border {
     &--title {
       // line-height: 1;
       margin: 0 auto 2rem;
-      font-size: 6vw;
+      font-size: max(6vw, 4.8rem);
 
       @include mq() {
         font-size: 9vw;
@@ -240,8 +244,8 @@ html.dark-mode .section-inner__number--text .number-border {
 
     &--subtitle {
       line-height: 1.5;
-      margin: 2rem auto 0;
-      font-size: 1vw;
+      margin: 2rem auto 4rem;
+      font-size: max(1.5vw, 1.2rem);
 
       @include mq() {
         font-size: 2.25vw;

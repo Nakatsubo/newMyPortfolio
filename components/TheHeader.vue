@@ -261,7 +261,7 @@ export default {
 
     &--image {
       width: auto;
-      height: 4rem;
+      height: 3.2rem;
       fill: $key-color-purple;
     }
   }
