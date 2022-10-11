@@ -123,9 +123,6 @@ gsap.config({
 export default {
   name: 'ProjectPage',
   mounted() {
-    // // Adobe Fonts
-    // this.$adobeFonts(document)
-
     // Set Fill Height
     this.$setFillHeight()
     let viewWindowWidth = window.innerWidth
@@ -298,86 +295,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// /* stylelint-disable */
-
-// common
-.index-wrapper {
-
-  // section
-  &__section {
-    width: 100%;
-    height: 100%;
-    // padding: 0 8vw;
-    position: fixed;
-    top: 0; left: 0;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-
-    &:not(.isFirst) {
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    // sns
-    &--sns-wrapper {
-      position: absolute;
-      bottom: 13rem;
-    }
-  }
-}
-
-.section-inner {
-  padding: 0 8vw;
-  text-align: center;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
-  // title
-  &__title {
-    position: fixed;
-    top: 12rem;
-
-    @include mq() {
-      top: 16rem;
-    }
-
-    &--text {
-      font-size: 2vw;
-      font-weight: 500;
-
-      @include mq() {
-        font-size: 4vw;
-      }
-    }
-  }
-
-  // heading
-  &__heading {
-    margin-bottom: 2rem;
-    line-height: 1.25;
-    font-size: 4.5vw;
-
-    @include mq() {
-      font-size: 6vw;
-    }
-  }
-
-  // body
-  &__body {
-    line-height: 2;
-    font-size: 1.5vw;
-
-    @include mq() {
-      font-size: 3vw;
-    }
-  }
-
-}
+/* stylelint-disable */
 
 // introduction
 .introduction-wrapper {
@@ -411,37 +329,4 @@ export default {
       }
     }
   }
-}
-
-// contact
-.contact-wrapper {
-
-  &__heading {
-    margin-bottom: 0;
-    font-size: 6vw;
-  }
-}
-
-.sns-wrapper {
-
-  &__sns-list {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-
-    &--item {
-      margin-left: 2rem;
-      font-size: 1.5vw;
-
-      &:first-of-type {
-        margin-left: 0;
-      }
-
-      @include mq() {
-        font-size: 1.2rem;
-      }
-    }
-  }
-}
-</style>
+}</style>

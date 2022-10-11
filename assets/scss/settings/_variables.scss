@@ -2,20 +2,22 @@
 // Color Settings
 // -------------------------------------------
 // base
-$base-color-primary: rgb(239, 238, 234);
-$base-color-secondary: rgb(0, 0, 0);
+// $base-color-primary: rgba(239, 238, 234, 1);
+$base-color-primary: rgba(254, 254, 254, 1);
+$base-color-secondary: rgba(0, 0, 0, 1);
 
 // text color
-$text-color-primary: rgb(0, 0, 0);
-$text-color-secondary: rgb(239, 238, 234);
+$text-color-primary: rgba(0, 0, 0, 1);
+// $text-color-secondary: rgba(239, 238, 234, 1);
+$text-color-secondary: rgba(254, 254, 254, 1);
 
 // key
-$key-color-black: rgb(0, 0, 0);
-$key-color-white: rgb(255, 255, 255);
-$key-color-lightgray: rgb(181, 181, 181);
-$key-color-darkgray: rgb(54, 53, 54);
-$key-color-bluegray: rgb(113, 128, 150);
-$key-color-purple: rgb(116, 83, 153);
+$key-color-black: rgba(0, 0, 0, 1);
+$key-color-white: rgba(254, 254, 254, 1);
+$key-color-lightgray: rgba(181, 181, 181, 1);
+$key-color-darkgray: rgba(54, 53, 54, 1);
+$key-color-bluegray: rgba(113, 128, 150, 1);
+$key-color-purple: rgba(116, 83, 153, 1);
 
 // background
 $color-body-background-primary: $base-color-primary;

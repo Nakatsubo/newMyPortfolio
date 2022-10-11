@@ -210,7 +210,7 @@ export default {
             }
           }
         )
-        this.$bodyScrollPrevent(false)
+        // this.$bodyScrollPrevent(false)
         headerWrapper.classList.remove('isMenuOpen')
         wallPaperWrapper.classList.remove('isMenuOpen')
       })
@@ -229,7 +229,7 @@ export default {
               }
             }
           )
-          this.$bodyScrollPrevent(false)
+          // this.$bodyScrollPrevent(false)
           headerWrapper.classList.remove('isMenuOpen')
           wallPaperWrapper.classList.remove('isMenuOpen')
         })
