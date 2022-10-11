@@ -39,8 +39,14 @@ const bodyScrollPrevent = (flag) => {
   }
 }
 
+// ランダム変数を生成する
+// const createRandomNumber = (num1, num2) => {
+//   return Math.floor(Math.random() * (num1 - num2 + 1)) + num2
+// }
+
 // エクスポート
 export default (context, inject) => {
   inject('setFillHeight', setFillHeight)
   inject('bodyScrollPrevent', bodyScrollPrevent)
+  // inject('createRandomNumber', createRandomNumber)
 }
