@@ -44,14 +44,14 @@ export default {
           pointY: createRandomNumber(0, 3),
           direction: boolean // -> boolean
         }
-        array.push(options);
+        array.push(options)
       }
-      return array;
+      return array
     }
 
     // Create PathLine Options
     function setAttributeValue(array) {
-      let attribute = '';
+      let attribute = ''
       for (let i = 0; i < 8; i ++) {
         let predefinedOption = array[i],
             direction = predefinedOption.direction ? 1 : -1,
@@ -65,26 +65,26 @@ export default {
       return attribute
     }
 
-    const wallPapers = document.querySelectorAll('.wallPaper-wrapper__wallPaper path');
-    const wallPapersArr = Array.from(wallPapers);
+    const wallPapers = document.querySelectorAll('.wallPaper-wrapper__wallPaper path')
+    const wallPapersArr = Array.from(wallPapers)
 
     let isWallPaper01 = true,
-        wallPaper01Options = [];
-    createPathLine(wallPaper01Options, isWallPaper01);
+        wallPaper01Options = []
+    createPathLine(wallPaper01Options, isWallPaper01)
     const changeWallPaper01Value = () => {
-      wallPapersArr[0].setAttribute('d', setAttributeValue(wallPaper01Options));
-      requestAnimationFrame(changeWallPaper01Value);
+      wallPapersArr[0].setAttribute('d', setAttributeValue(wallPaper01Options))
+      requestAnimationFrame(changeWallPaper01Value)
     }
-    changeWallPaper01Value();
+    changeWallPaper01Value()
 
     let isWallPaper02 = true,
-        wallPaper02Options = [];
-    createPathLine(wallPaper02Options, isWallPaper02);
+        wallPaper02Options = []
+    createPathLine(wallPaper02Options, isWallPaper02)
     const changeWallPaper02Value = () => {
-      wallPapersArr[1].setAttribute('d', setAttributeValue(wallPaper02Options));
-      requestAnimationFrame(changeWallPaper02Value);
+      wallPapersArr[1].setAttribute('d', setAttributeValue(wallPaper02Options))
+      requestAnimationFrame(changeWallPaper02Value)
     }
-    changeWallPaper02Value();
+    changeWallPaper02Value()
   }
 }
 </script>

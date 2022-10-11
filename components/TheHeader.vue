@@ -39,6 +39,7 @@
                     class="glMenu-item-project"
                     >
                     <div id="link-wrapper-project" class="link-wrapper-glMenu mouse-link">
+                      <span class="link-cover"></span>
                       <span class="link-wrapper-glMenu__list">
                         <span class="link-wrapper-glMenu__list--item">PROJECT</span>
                         <span class="link-wrapper-glMenu__list--item">PROJECT</span>
@@ -52,6 +53,7 @@
                     class="glMenu-item-about"
                     >
                     <div id="link-wrapper-about" class="link-wrapper-glMenu mouse-link">
+                      <span class="link-cover"></span>
                       <span class="link-wrapper-glMenu__list">
                         <span class="link-wrapper-glMenu__list--item">ABOUT</span>
                         <span class="link-wrapper-glMenu__list--item">ABOUT</span>
@@ -65,6 +67,7 @@
                     class="glMenu-item-blog"
                     >
                     <div id="link-wrapper-blog" class="link-wrapper-glMenu mouse-link">
+                      <span class="link-cover"></span>
                       <span class="link-wrapper-glMenu__list">
                         <span class="link-wrapper-glMenu__list--item">BLOG</span>
                         <span class="link-wrapper-glMenu__list--item">BLOG</span>
@@ -82,6 +85,7 @@
             @mouseover="mouseoverMenuClose"
             @mouseleave="mouseleaveMenuClose">
             <div id="link-wrapper-menuClose" class="link-wrapper-menu">
+              <span class="link-cover"></span>
               <span class="link-wrapper-menu__list link-wrapper-menu">
                 <span class="link-wrapper-menu__list--item">CLOSE</span>
                 <span class="link-wrapper-menu__list--item">CLOSE</span>
@@ -171,65 +175,104 @@ export default {
       const wallPaperWrapper = document.getElementById('wallPaper-wrapper')
       const linkWrapperGlMenu = document.getElementsByClassName('link-wrapper-glMenu')
 
+      function showMenuItem() {
+        const linkCovers = document.querySelectorAll('.link-cover')
+
+        linkCovers.forEach((linkCover) => {
+          gsap.timeline()
+            .add(showTimeline(linkCover))
+        })
+      }
+
+      function showTimeline(target) {
+        const tl =
+          gsap.timeline()
+          .set(target, {
+            x: '0%',
+            ease: 'Power3.easeIn'
+          })
+          .to(target, {
+            x: '100%',
+            duration: 0.25,
+          })
+        return tl;
+      }
+
+      function hideMenuItem() {
+        const linkCovers = document.querySelectorAll('.link-cover')
+
+        linkCovers.forEach((linkCover) => {
+          gsap.timeline()
+            .add(hideTimeline(linkCover))
+        })
+      }
+
+      function hideTimeline(target) {
+        const tl =
+          gsap.timeline()
+          .set(target, {
+            x: '100%',
+            ease: 'Power3.easeIn'
+          })
+          .to(target, {
+            x: '0%',
+            duration: 0.25,
+          })
+        return tl;
+      }
+
       // this -> アロー関数で指定するとトップレベルのthisを参照する
       menuOpenBtn.addEventListener('click', () => {
         gsap.timeline()
-          .killTweensOf(glMenu)
-          .killTweensOf(menuCloseBtn)
           .set(glMenu, {
             display: 'block',
-            x: '-100%'
+            y: '100%'
           })
           .to(glMenu, 0.5, {
-            x: '0%',
+            y: '0%',
             ease: 'Power3.easeIn',
             onComplete: () => {
               gsap.timeline()
-                .killTweensOf(menuCloseBtn)
                 .to(menuCloseBtn, 0.3, {
                   opacity: 1,
                   ease: 'Power3.easeOut'
                 })
               }
           })
-        this.$bodyScrollPrevent(true)
+          .call(showMenuItem)
         headerWrapper.classList.add('isMenuOpen')
         wallPaperWrapper.classList.add('isMenuOpen')
       })
 
       menuCloseBtn.addEventListener('click', () => {
         gsap.timeline()
-          .killTweensOf(glMenu)
-          .killTweensOf(menuOpenBtn)
+          .call(hideMenuItem)
           .to(glMenu, 0.4, {
-            delay: .2,
-            x: '-100%',
-            ease: 'Power2.easeIn',
+            delay: 0.2,
+            y: '-100%',
+            ease: 'Power3.easeOut',
             onComplete: () => {
               glMenu.style.display = 'none'
             }
           }
         )
-        // this.$bodyScrollPrevent(false)
-        headerWrapper.classList.remove('isMenuOpen')
         wallPaperWrapper.classList.remove('isMenuOpen')
+        headerWrapper.classList.remove('isMenuOpen')
       })
 
       for(let i = 0; i < linkWrapperGlMenu.length; i += 1) {
         linkWrapperGlMenu[i].addEventListener('click', () => {
           gsap.timeline()
-            .killTweensOf(glMenu)
-            .killTweensOf(menuOpenBtn)
+            .call(hideMenuItem)
             .to(glMenu, 0.4, {
-              delay: .2,
-              x: '-100%',
-              ease: 'Power2.easeIn',
+              delay: 0.2,
+              y: '-100%',
+              ease: 'Power3.easeOut',
               onComplete: () => {
                 glMenu.style.display = 'none'
               }
             }
           )
-          // this.$bodyScrollPrevent(false)
           headerWrapper.classList.remove('isMenuOpen')
           wallPaperWrapper.classList.remove('isMenuOpen')
         })
@@ -267,7 +310,9 @@ export default {
   }
 
   &__menu {
-    font-size: 1.25vw;
+    font-size: max(1.2vw, 1.2rem);
+    font-weight: 500;
+    letter-spacing: 0.08rem;
 
     @include mq() {
       font-size: 1.2rem;
@@ -290,6 +335,7 @@ export default {
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+
     &--content {
       position: relative;
       width: 100%;
@@ -301,7 +347,9 @@ export default {
   &__close {
     position: absolute;
     top: calc(4rem + 1.25vw / 2); right: 4rem;
-    font-size: 1.25vw;
+    font-size: max(1.2vw, 1.2rem);
+    font-weight: 500;
+    letter-spacing: 0.08rem;
     color: $key-color-white;
     opacity: 0;
 
@@ -339,15 +387,16 @@ export default {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    font-size: 3vw;
 
     @include mq() {
       flex-flow: column nowrap;
-      font-size: 2.4rem;
     }
 
     &--item {
-      margin-left: 6rem;
+      margin-left: 8rem;
+      font-size: max(3vw, 2.4rem);
+      font-weight: 400;
+      letter-spacing: 0.08em;
 
       &:first-of-type {
         margin-left: 0;
