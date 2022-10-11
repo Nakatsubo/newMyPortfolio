@@ -112,14 +112,12 @@ export default {
     fill: none;
     stroke: rgba(54, 53, 54, 0.08);
     stroke-width: 0.1px;
-    vector-effect: non-scaling-stroke;
   }
 
   .wallPaper02 {
     fill: none;
     stroke: rgba(54, 53, 54, 0.16);
     stroke-width: 0.1px;
-    vector-effect: non-scaling-stroke;
   }
 }
 
@@ -127,17 +125,11 @@ export default {
   z-index: 99;
 
   .wallPaper01 {
-    fill: none;
     stroke: rgba(255, 255, 255, 0.08);
-    stroke-width: 0.1px;
-    vector-effect: non-scaling-stroke;
   }
 
   .wallPaper02 {
-    fill: none;
     stroke: rgba(255, 255, 255, 0.16);
-    stroke-width: 0.1px;
-    vector-effect: non-scaling-stroke;
   }
 }
 
