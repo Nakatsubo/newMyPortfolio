@@ -1,7 +1,6 @@
 <template>
   <div id="cursor-wrapper" class="cursor-wrapper">
     <div id="mouse-cursor" class="cursor-wrapper__cursor"></div>
-    <div id="mouse-follower" class="cursor-wrapper__follower"></div>
   </div>
 </template>
 
@@ -81,6 +80,14 @@ export default {
     }
   }
 
+}
+
+// dark-mode
+html.dark-mode .cursor-wrapper {
+
+  &__cursor {
+    background-color: $key-color-white;
+  }
 }
 
 </style>
