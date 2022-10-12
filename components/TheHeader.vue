@@ -228,7 +228,8 @@ export default {
             display: 'block',
             y: '100%'
           })
-          .to(glMenu, 0.5, {
+          .to(glMenu, 0.4, {
+            delay: 0.2,
             y: '0%',
             ease: 'Power3.easeIn',
             onComplete: () => {
@@ -240,13 +241,19 @@ export default {
               }
           })
           .call(showMenuItem)
-        headerWrapper.classList.add('isMenuOpen')
-        wallPaperWrapper.classList.add('isMenuOpen')
+        setTimeout(() => {
+          headerWrapper.classList.add('isMenuOpen')
+          wallPaperWrapper.classList.add('isMenuOpen')
+        }, 600)
       })
 
       menuCloseBtn.addEventListener('click', () => {
         gsap.timeline()
           .call(hideMenuItem)
+          .set(glMenu, {
+            display: 'block',
+            y: '0%'
+          })
           .to(glMenu, 0.4, {
             delay: 0.2,
             y: '-100%',
@@ -254,10 +261,11 @@ export default {
             onComplete: () => {
               glMenu.style.display = 'none'
             }
-          }
-        )
-        wallPaperWrapper.classList.remove('isMenuOpen')
-        headerWrapper.classList.remove('isMenuOpen')
+          })
+        setTimeout(() => {
+          wallPaperWrapper.classList.remove('isMenuOpen')
+          headerWrapper.classList.remove('isMenuOpen')
+        }, 600)
       })
 
       for(let i = 0; i < linkWrapperGlMenu.length; i += 1) {
