@@ -417,6 +417,7 @@ export default {
       @include mq() {
         margin-bottom: 3rem;
         margin-left: 0;
+        font-size: 2rem;
 
         &:last-of-type {
           margin-bottom: 0;
