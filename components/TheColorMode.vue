@@ -45,6 +45,7 @@ export default {
   align-items: center;
 
   @include mq() {
+    bottom: 3.6rem; right: 2.4rem;
     font-size: 1rem;
   }
 
