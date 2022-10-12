@@ -295,6 +295,10 @@ export default {
 .header-wrapper {
   position: fixed;
   top: 4rem; right: 4rem; left: 4rem;
+
+  @include mq() {
+    top: 3.6rem; right: 2.4rem; left: 2.4rem;
+  }
 }
 
 .header-inner {

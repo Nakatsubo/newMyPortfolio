@@ -7,17 +7,22 @@
 </template>
 
 <style lang="scss" scoped>
-// /* stylelint-disable */
-
 .footer-wrapper {
-  font-size: 1vw;
   position: fixed;
   bottom: 4rem;
   left: 50%;
   transform: translateX(-50%);
 
   @include mq() {
-    font-size: 1rem;
+    bottom: 3.6rem;
+  }
+
+  &__copyright {
+    font-size: max(1vw, 1rem);
+
+    @include mq() {
+      font-size: 1rem;
+    }
   }
 
 }
