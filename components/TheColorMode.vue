@@ -36,7 +36,9 @@ export default {
 .colorMode-wrapper {
   position: fixed;
   bottom: 4rem; right: 4rem;
-  font-size: 1vw;
+  font-size: max(1vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0.08rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -47,10 +49,10 @@ export default {
   }
 
   &__color {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 1rem;
-    margin-bottom: 1.5rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    margin-bottom: 1.2rem;
     background-color: $key-color-purple;
   }
 
@@ -68,10 +70,10 @@ export default {
 
     .toggle-label {
       display: inline-block;
-      width: 4rem;
-      height: 2rem;
-      border-radius: 2rem;
-      margin-bottom: 1rem;
+      width: 3.2rem;
+      height: 1.6rem;
+      border-radius: 0.8rem;
+      margin-bottom: 1.2rem;
       background-color: $key-color-lightgray;
       transition: $transition-primary;
       position: relative;
@@ -81,8 +83,8 @@ export default {
         content: '';
         position: absolute;
         top: 0; left: 0;
-        width: 2rem;
-        height: 2rem;
+        width: 1.6rem;
+        height: 1.6rem;
         border-radius: 100%;
         background-color: $key-color-white;
         transition: $transition-primary;
@@ -93,7 +95,7 @@ export default {
       background-color: $key-color-bluegray;
 
       &:after {
-        left: 2rem;
+        left: 1.6rem;
       }
     }
 
