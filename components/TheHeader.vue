@@ -318,7 +318,7 @@ export default {
   }
 
   &__menu {
-    font-size: max(1.2vw, 1.2rem);
+    font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 0.08rem;
 
@@ -355,7 +355,7 @@ export default {
   &__close {
     position: absolute;
     top: calc(4rem + 1.25vw / 2); right: 4rem;
-    font-size: max(1.2vw, 1.2rem);
+    font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 0.08rem;
     color: $key-color-white;
@@ -402,7 +402,7 @@ export default {
 
     &--item {
       margin-left: 8rem;
-      font-size: max(3vw, 2.4rem);
+      font-size: max(2vw, 2rem);
       font-weight: 400;
       letter-spacing: 0.08em;
 
