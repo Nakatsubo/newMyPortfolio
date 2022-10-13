@@ -90,7 +90,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// /* stylelint-disable */
 
 .wallPaper-wrapper {
   width: 100%;
@@ -144,4 +143,5 @@ html.dark-mode .wallPaper-wrapper {
     stroke: rgba(255, 255, 255, 0.4);
   }
 }
+
 </style>

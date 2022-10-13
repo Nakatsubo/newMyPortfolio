@@ -39,6 +39,7 @@ export default {
   font-size: max(1vw, 1rem);
   font-weight: 500;
   letter-spacing: 0.08rem;
+  z-index: 1;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;

@@ -2,9 +2,9 @@
   <div class="index-wrapper">
 
     <section class="index-wrapper__section isFirst">
-      <div class="index-wrapper__section--introduction section-inner introduction-wrapper">
-        <div class="section-inner__number blog-wrapper__number">
-          <p class="section-inner__number--text blog-wrapper__number--text">
+      <div class="section-inner introduction-wrapper">
+        <div class="section-inner__number">
+          <p class="section-inner__number--text">
             01
             <span class="number-border"></span>
             05
@@ -33,35 +33,35 @@
     </section>
 
     <section class="index-wrapper__section">
-      <div class="index-wrapper__section--project section-inner project-wrapper">
-        <div class="section-inner__number blog-wrapper__number">
-          <p class="section-inner__number--text blog-wrapper__number--text">
+      <div class="section-inner">
+        <div class="section-inner__number">
+          <p class="section-inner__number--text">
             02
             <span class="number-border"></span>
             05
           </p>
         </div>
-        <div class="section-inner__title project-wrapper__title">
-          <h1 class="section-inner__title--text project-wrapper--text">
+        <div class="section-inner__title">
+          <h1 class="section-inner__title--text">
             PROJECT
           </h1>
         </div>
-        <div class="section-inner__heading project-wrapper__heading">
-          <p class="section-inner__heading--text project-wrapper__heading--text isSerif">
+        <div class="section-inner__heading">
+          <p class="section-inner__heading--text isSerif">
             Your creative web development partner.
           </p>
         </div>
-        <div class="section-inner__body project-wrapper__body">
-          <p class="section-inner__body--text project-wrapper__body--text">
+        <div class="section-inner__body">
+          <p class="section-inner__body--text">
             デジタル領域を中心としたクライアント様の課題解決やビジネスチャンスのサポートをさせていただきます。<br>
             Webコンテンツのプランニングから、クリエイティブ、PDCAサイクルに則った継続的な改善まで一気通貫で実行いたします。また、課題やビジネスに応じて動画コンテンツの制作も可能です。<br>
             多種多様な業界のサイト構築の制作実績がございますので、 クライアント様の目的に応じた最適な形をご提案いたします。
           </p>
         </div>
       </div>
-      <div class="index-wrapper__section--link">
-        <nuxt-link
-          to="/project"
+      <div class="section-link">
+        <a
+          href="/project"
           @mouseover="mouseoverProject"
           @mouseleave="mouseleaveProject">
           <div id="link-wrapper-project" class="link-wrapper-viewmore mouse-link">
@@ -70,31 +70,31 @@
               <span class="link-wrapper-viewmore__list--item">VIEW MORE</span>
             </span>
           </div>
-        </nuxt-link>
+        </a>
       </div>
     </section>
 
     <section class="index-wrapper__section">
-      <div class="index-wrapper__section--about section-inner about-wrapper">
-        <div class="section-inner__number blog-wrapper__number">
-          <p class="section-inner__number--text blog-wrapper__number--text">
+      <div class="section-inner">
+        <div class="section-inner__number">
+          <p class="section-inner__number--text">
             03
             <span class="number-border"></span>
             05
           </p>
         </div>
-        <div class="section-inner__title about-wrapper__title">
-          <h1 class="section-inner__title--text about-wrapper__heading--text">
+        <div class="section-inner__title">
+          <h1 class="section-inner__title--text">
             ABOUT
           </h1>
         </div>
-        <div class="section-inner__heading about-wrapper__heading">
-           <p class="section-inner__heading--text about-wrapper__heading--text isSerif">
+        <div class="section-inner__heading">
+           <p class="section-inner__heading--text isSerif">
             Engaging, purposeful, and creative.
            </p>
         </div>
-        <div class="section-inner__body about-wrapper__body">
-          <p class="section-inner__body--text about-wrapper__body--text">
+        <div class="section-inner__body">
+          <p class="section-inner__body--text">
             映像のポストプロダクションを経て、Web制作会社へジョイン。
             プロダクションマネージャー、ディレクターとして、多種多様な業界のクライアント様のデジタル領域制作を担い、実績を積みました。<br>
             並行して、デザイン、フロントエンド開発、バックエンド構築、動画制作などの業務を実行し、制作スキル一式をブラッシュアップ。<br>
@@ -102,9 +102,9 @@
           </p>
         </div>
       </div>
-      <div class="index-wrapper__section--link">
-        <nuxt-link
-          to="/about"
+      <div class="section-link">
+        <a
+          href="/about"
           @mouseover="mouseoverAbout"
           @mouseleave="mouseleaveAbout">
           <div id="link-wrapper-about" class="link-wrapper-viewmore mouse-link">
@@ -113,36 +113,36 @@
               <span class="link-wrapper-viewmore__list--item">VIEW MORE</span>
             </span>
           </div>
-        </nuxt-link>
+        </a>
       </div>
     </section>
 
     <section class="index-wrapper__section">
-      <div class="index-wrapper__section--blog section-inner blog-wrapper">
-        <div class="section-inner__number blog-wrapper__number">
-          <p class="section-inner__number--text blog-wrapper__number--text">
+      <div class="section-inner">
+        <div class="section-inner__number">
+          <p class="section-inner__number--text">
             04
             <span class="number-border"></span>
             05
           </p>
         </div>
-        <div class="section-inner__title blog-wrapper__title">
-          <h1 class="section-inner__title--text blog-wrapper__title--text">
+        <div class="section-inner__title">
+          <h1 class="section-inner__title--text">
             BLOG
           </h1>
         </div>
-        <div class="section-inner__heading blog-wrapper__heading">
-          <p class="section-inner__heading--text blog-wrapper__heading--text isSerif">
+        <div class="section-inner__heading">
+          <p class="section-inner__heading--text isSerif">
             COMING SOON
           </p>
         </div>
-        <!-- <div class="section-inner__body blog-wrapper__body">
-          <p class="section-inner__body--text blog-wrapper__body--text">
+        <!-- <div class="section-inner__body">
+          <p class="section-inner__body--text">
 
           </p>
         </div> -->
       </div>
-      <!-- <div class="index-wrapper__section--link">
+      <!-- <div class="section-link">
         <a
           href="#"
           target="_blank"
@@ -158,17 +158,17 @@
       </div> -->
     </section>
 
-    <section id="index-contact" class="index-wrapper__section">
-      <div class="index-wrapper__section--contact section-inner contact-wrapper">
-        <div class="section-inner__number blog-wrapper__number">
-          <p class="section-inner__number--text blog-wrapper__number--text">
+    <section class="index-wrapper__section">
+      <div class="section-inner contact-wrapper">
+        <div class="section-inner__number">
+          <p class="section-inner__number--text">
             05
             <span class="number-border"></span>
             05
           </p>
         </div>
-        <div class="section-inner__title contact-wrapper__title">
-          <h1 class="section-inner__title--text contact-wrapper__title--text">
+        <div class="section-inner__title">
+          <h1 class="section-inner__title--text">
             CONTACT
           </h1>
         </div>
@@ -188,8 +188,8 @@
           </a>
         </div>
       </div>
-      <div class="index-wrapper__section--sns-wrapper sns-wrapper section-inner__body">
-        <ul class="index-wrapper__section--sns-wrapper__sns-list sns-wrapper__sns-list">
+      <div class="sns-wrapper">
+        <ul class="sns-wrapper__sns-list">
           <li class="sns-wrapper__sns-list--item">
             <a
               href="https://www.linkedin.com/in/office-yusuke-nakatsubo-736ba924a/"
@@ -255,30 +255,30 @@
     </section>
 
     <div class="index-wrapper__list">
-      <div class="index-wrapper__list--item item-wrapper">
-        <div class="item-wrapper__number">01</div>
-        <div class="item-wrapper__border"></div>
-        <div class="item-wrapper__text">INTRODUCTION</div>
+      <div class="list-item-wrapper">
+        <div class="list-item-wrapper__number">01</div>
+        <div class="list-item-wrapper__border"></div>
+        <div class="list-item-wrapper__text">INTRODUCTION</div>
       </div>
-      <div class="index-wrapper__list--item item-wrapper">
-        <div class="item-wrapper__number">02</div>
-        <div class="item-wrapper__border"></div>
-        <div class="item-wrapper__text">PROJECT</div>
+      <div class="list-item-wrapper">
+        <div class="list-item-wrapper__number">02</div>
+        <div class="list-item-wrapper__border"></div>
+        <div class="list-item-wrapper__text">PROJECT</div>
       </div>
-      <div class="index-wrapper__list--item item-wrapper">
-        <div class="item-wrapper__number">03</div>
-        <div class="item-wrapper__border"></div>
-        <div class="item-wrapper__text">ABOUT</div>
+      <div class="list-item-wrapper">
+        <div class="list-item-wrapper__number">03</div>
+        <div class="list-item-wrapper__border"></div>
+        <div class="list-item-wrapper__text">ABOUT</div>
       </div>
-      <div class="index-wrapper__list--item item-wrapper">
-        <div class="item-wrapper__number">04</div>
-        <div class="item-wrapper__border"></div>
-        <div class="item-wrapper__text">BLOG</div>
+      <div class="list-item-wrapper">
+        <div class="list-item-wrapper__number">04</div>
+        <div class="list-item-wrapper__border"></div>
+        <div class="list-item-wrapper__text">BLOG</div>
       </div>
-      <div class="index-wrapper__list--item item-wrapper">
-        <div class="item-wrapper__number">05</div>
-        <div class="item-wrapper__border"></div>
-        <div class="item-wrapper__text">CONTACT</div>
+      <div class="list-item-wrapper">
+        <div class="list-item-wrapper__number">05</div>
+        <div class="list-item-wrapper__border"></div>
+        <div class="list-item-wrapper__text">CONTACT</div>
       </div>
     </div>
 
@@ -311,7 +311,7 @@ export default {
 
     // Section Transition
     const sections = gsap.utils.toArray('.index-wrapper__section')
-    const lists = gsap.utils.toArray('.index-wrapper__list--item')
+    const lists = gsap.utils.toArray('.list-item-wrapper')
 
     let currentSection = sections[0]
 
@@ -379,6 +379,11 @@ export default {
             autoAlpha: 0,
             duration: 0.3
           })
+          .to(currentSection.querySelector('.section-link'), {
+            y: -10,
+            autoAlpha: 0,
+            duration: 0.3
+          })
 
         gsap.timeline()
           .to(newSection, {
@@ -430,6 +435,15 @@ export default {
             y: 0,
             duration: 0.3
           })
+          .fromTo(newSection.querySelector('.section-link'), {
+            y: 10,
+            autoAlpha: 0
+          },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.3
+          })
 
         currentSection = newSection
 
@@ -438,7 +452,7 @@ export default {
 
   },
   methods: {
-    // for internal link
+    // for Internal Link
     mouseoverProject() {
       const linkWrapperProject = document.getElementById('link-wrapper-project')
       linkWrapperProject.classList.add('isHover')
@@ -511,6 +525,50 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* stylelint-disable */
+
+// list
+.list-item-wrapper {
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.8;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__border {
+    width: 0.5rem;
+    height: auto;
+    margin: 0 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.8);
+  }
+}
+
+.list-item-wrapper.isActive {
+  border: 1.5px solid rgba(0, 0, 0, 0.8);
+  border-radius: 16.5rem;
+  font-weight: 600;
+
+  .list-item-wrapper__border {
+    border-top: 2px solid rgba(0, 0, 0, 0.8);
+  }
+}
+
+// dark-mode
+html.dark-mode .list-item-wrapper__border {
+  border-top: 1px solid $key-color-white;
+}
+html.dark-mode .list-item-wrapper.isActive {
+  border: 1px solid $key-color-white;
+}
+html.dark-mode .list-item-wrapper.isActive .list-item-wrapper__border {
+  border-top: 2px solid $key-color-white;
+}
 
 </style>

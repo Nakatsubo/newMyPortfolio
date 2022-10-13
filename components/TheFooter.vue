@@ -11,17 +11,19 @@
 .footer-wrapper {
   width: 100%;
   height: auto;
-  padding: 0 4rem 4rem;
+  padding: 4rem;
   text-align: center;
   position: fixed;
   bottom: 0; left: 0;
 
   @include mq() {
-    padding: 0 2.4rem 3.6rem;
+    padding: 3.6rem 2.4rem;
   }
 
   &__copyright {
     font-size: max(1vw, 1rem);
+    font-weight: 500;
+    letter-spacing: 0.08rem;
 
     @include mq() {
       font-size: 1rem;
