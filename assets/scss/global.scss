@@ -84,7 +84,7 @@
     @include mq(sm) {
       display: inline-block;
       position: fixed;
-      top: 10.7rem; right: 0; left: 0;
+      top: 8.7rem; right: 0; left: 0;
       font-size: 1.4rem;
       font-weight: 500;
     }
@@ -108,7 +108,7 @@
     top: 15.5rem;
 
     @include mq(sm) {
-      top: 14.7rem;
+      top: 12.7rem;
     }
 
     &--text {
@@ -128,7 +128,7 @@
     line-height: 1.25;
 
     @include mq(sm) {
-      margin-top: 8rem;
+      margin-top: 4rem;
       margin-bottom: 2rem;
     }
 
@@ -145,10 +145,6 @@
   &__body {
     line-height: 2;
     text-align: left;
-
-    @include mq(sm) {
-      // margin-bottom: 0;
-    }
 
     &--text {
       font-size: max(1.4vw, 1.4rem);
@@ -258,7 +254,8 @@ html.dark-mode .introduction-arrow__image {
   letter-spacing: 0.08rem;
 
   @include mq(sm) {
-    display: none;
+    display: inline-block;
+    right: 0; bottom: 8.2rem; left: 0;
   }
 
   &:after {
@@ -270,6 +267,14 @@ html.dark-mode .introduction-arrow__image {
     width: 15rem;
     height: auto;
     border-top: 1px solid $key-color-black;
+
+    @include mq(sm) {
+      top: 0; right: 0; bottom: 0; left: 0;
+      width: 8.58rem;
+      border-top: none;
+      border-bottom: 2px solid $key-color-black;
+      margin: 0 auto;
+    }
   }
 }
 
