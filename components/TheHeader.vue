@@ -292,12 +292,16 @@ export default {
 
 <style lang="scss" scoped>
 
+// Layout
 .header-wrapper {
+  width: 100%;
+  height: auto;
+  padding: 4rem 4rem 0;
   position: fixed;
-  top: 4rem; right: 4rem; left: 4rem;
+  top: 0; left: 0;
 
   @include mq() {
-    top: 3.6rem; right: 2.4rem; left: 2.4rem;
+    padding: 3.6rem 2.4rem 0 2.4rem;
   }
 }
 
@@ -322,6 +326,7 @@ export default {
   }
 
   &__menu {
+    padding-top: 1.1rem;
     font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 0.08rem;
@@ -357,8 +362,9 @@ export default {
   }
 
   &__close {
+    padding-top: 1.1rem;
     position: absolute;
-    top: calc(4rem + 1.25vw / 2); right: 4rem;
+    top: 4rem; right: 4rem;
     font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 0.08rem;
@@ -366,8 +372,7 @@ export default {
     opacity: 0;
 
     @include mq() {
-      top: 5.2rem;
-      font-size: 1.2rem;
+      top: 3.6rem; right: 2.4rem;
     }
   }
 
