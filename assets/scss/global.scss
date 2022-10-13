@@ -84,7 +84,7 @@
     @include mq(sm) {
       display: inline-block;
       position: fixed;
-      top: 8.7rem; right: 0; left: 0;
+      top: 14.7vh; right: 0; left: 0;
       font-size: 1.4rem;
       font-weight: 500;
     }
@@ -108,7 +108,7 @@
     top: 15.5rem;
 
     @include mq(sm) {
-      top: 12.7rem;
+      top: 19.7vh;
     }
 
     &--text {
@@ -128,7 +128,7 @@
     line-height: 1.25;
 
     @include mq(sm) {
-      margin-top: 4rem;
+      margin-top: 4vh;
       margin-bottom: 2rem;
     }
 
@@ -280,7 +280,7 @@ html.dark-mode .introduction-arrow__image {
 
 // dark-mode
 html.dark-mode .section-link::after {
-  border-top: 1px solid $key-color-white
+  border-bottom: 2px solid $key-color-white;
 }
 
 
