@@ -23,12 +23,11 @@
       </div>
       <div class="introduction-arrow">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="3.4091" stroke-miterlimit="13.6364" viewBox="0 0 300 300" class="introduction-arrow__image">
-        <title>arrow</title>
-        <path d="M150.068,0,150.068,300"/>
-        <path d="M150.67,300,c0-68.945,47.052-126.903,110.795-143.512"/>
-        <path d="M38.67,156.488,C102.414,173.097,149.466,231.055,149.466,300"/>
-      </svg>
-
+          <title>arrow</title>
+          <path d="M150.068,0,150.068,300"/>
+          <path d="M150.67,300,c0-68.945,47.052-126.903,110.795-143.512"/>
+          <path d="M38.67,156.488,C102.414,173.097,149.466,231.055,149.466,300"/>
+        </svg>
       </div>
     </section>
 
@@ -374,6 +373,11 @@ export default {
             autoAlpha: 0,
             duration: 0.3
           })
+          .to(currentSection.querySelector('.introduction-arrow'), {
+            y: -10,
+            autoAlpha: 0,
+            duration: 0.3
+          })
           .to(currentSection.querySelector('.sns-wrapper'), {
             y: -10,
             autoAlpha: 0,
@@ -418,6 +422,15 @@ export default {
             duration: 0.3
           })
           .fromTo(newSection.querySelector('.section-inner__body'), {
+            y: 10,
+            autoAlpha: 0
+          },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.3
+          })
+          .fromTo(newSection.querySelector('.introduction-arrow'), {
             y: 10,
             autoAlpha: 0
           },
