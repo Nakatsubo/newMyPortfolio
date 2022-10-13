@@ -2,14 +2,14 @@
   <div class="index-wrapper">
 
     <section class="index-wrapper__section isFirst">
-      <div class="index-wrapper__section--introduction section-inner introduction-wrapper">
+      <div class="section-inner introduction-wrapper">
         <div class="section-inner__title introduction-wrapper__greet">
           <h1 class="introduction-wrapper__greet--title isSerif">
             PROJECT
           </h1>
         </div>
-        <div class="section-inner__body introduction-wrapper__body">
-          <p class="section-inner__body--text introduction-wrapper__body--text">
+        <div class="section-inner__body">
+          <p class="section-inner__body--text">
             申し訳ございません。<br class="isSp">このサイトで制作実績は掲載しておりません。<br>
             メールよりお問い合わせください。
           </p>
@@ -17,10 +17,17 @@
       </div>
     </section>
 
-    <section id="index-contact" class="index-wrapper__section">
-      <div class="index-wrapper__section--contact section-inner contact-wrapper">
-        <div class="section-inner__title contact-wrapper__title">
-          <h1 class="section-inner__title--text contact-wrapper__title--text">
+    <section class="index-wrapper__section">
+      <div class="section-inner contact-wrapper">
+        <div class="section-inner__number">
+          <p class="section-inner__number--text">
+            05
+            <span class="number-border"></span>
+            05
+          </p>
+        </div>
+        <div class="section-inner__title">
+          <h1 class="section-inner__title--text">
             CONTACT
           </h1>
         </div>
@@ -40,8 +47,8 @@
           </a>
         </div>
       </div>
-      <div class="index-wrapper__section--sns-wrapper sns-wrapper section-inner__body">
-        <ul class="index-wrapper__section--sns-wrapper__sns-list sns-wrapper__sns-list">
+      <div class="sns-wrapper">
+        <ul class="sns-wrapper__sns-list">
           <li class="sns-wrapper__sns-list--item">
             <a
               href="https://www.linkedin.com/in/office-yusuke-nakatsubo-736ba924a/"
@@ -296,39 +303,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* stylelint-disable */
 
 // introduction
 .introduction-wrapper {
-  position: relative;
 
   // greet
   &__greet {
-    text-align: center;
-    position: static;
-
-    @include mq() {
-      text-align: left;
-    }
 
     &--title {
       margin: 0 auto 8rem;
-      font-size: 4vw;
+      font-size: max(4vw, 4rem);
 
       @include mq() {
         font-size: 8vw;
       }
     }
-
-    &--subtitle {
-      line-height: 1.5;
-      margin: 2rem auto 0;
-      font-size: 1.5vw;
-
-      @include mq() {
-        font-size: 2.25vw;
-      }
-    }
   }
+
 }
+
 </style>
