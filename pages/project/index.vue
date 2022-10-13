@@ -8,7 +8,7 @@
             PROJECT
           </h1>
         </div>
-        <div class="section-inner__body">
+        <div class="section-inner__body introduction-wrapper__lead">
           <p class="section-inner__body--text">
             申し訳ございません。<br class="isSp">このサイトで制作実績は掲載しておりません。<br>
             メールよりお問い合わせください。
@@ -317,6 +317,14 @@ export default {
       @include mq(sm) {
         font-size: 8vw;
       }
+    }
+  }
+
+  &__lead {
+    text-align: center;
+
+    @include mq(sm) {
+      text-align: left;
     }
   }
 

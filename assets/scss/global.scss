@@ -104,6 +104,8 @@
 
   // title
   &__title {
+    width: 100%;
+    height: auto;
     position: fixed;
     top: 15.5rem;
 
@@ -124,6 +126,8 @@
 
   // heading
   &__heading {
+    width: 100%;
+    height: auto;
     margin-bottom: 4rem;
     line-height: 1.25;
 
@@ -143,6 +147,8 @@
 
   // body
   &__body {
+    width: 100%;
+    height: auto;
     line-height: 2;
     text-align: left;
 
@@ -193,15 +199,17 @@ html.dark-mode .section-inner__number--text .number-border {
 
     &--subtitle {
       line-height: 1.5;
-      font-size: max(1.2vw, 1.2rem);
+      font-size: max(1.4vw, 1.4rem);
       font-weight: 500;
       letter-spacing: 0.08em;
+      opacity: 0.8;
 
       @include mq(sm) {
-        font-size: max(1vw, 1rem);
+        font-size: max(1.2vw, 1.2rem);
       }
     }
   }
+
 }
 
 .introduction-arrow {
