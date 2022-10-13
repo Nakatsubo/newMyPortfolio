@@ -53,7 +53,7 @@
       font-weight: 500;
 
       @include mq() {
-        bottom: 10rem;
+        bottom: 8rem; left: 16rem;
         font-size: 1rem;
       }
 
@@ -68,10 +68,9 @@
         border-top: 1px solid $key-color-black;
 
         @include mq() {
-          top: 0.425rem;
+          top: 0.425rem; right: 0; left: -16rem;
         }
       }
-
     }
 
     // sns
@@ -267,7 +266,7 @@ html.dark-mode .section-inner__number--text .number-border {
       font-size: max(4.8vw, 4.8rem);
 
       @include mq() {
-        font-size: 9vw;
+        font-size: max(3.6vw, 3.6rem);
       }
     }
 
@@ -279,7 +278,7 @@ html.dark-mode .section-inner__number--text .number-border {
       opacity: 0.8;
 
       @include mq() {
-        font-size: 2.25vw;
+        // font-size: 2.25vw;
       }
     }
   }
@@ -289,6 +288,10 @@ html.dark-mode .section-inner__number--text .number-border {
   position: absolute;
   bottom: 12rem;
   text-align: center;
+
+  @include mq() {
+    bottom: 8rem;
+  }
 
   &__image {
     max-width: 6.6rem;
