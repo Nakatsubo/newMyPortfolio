@@ -2,14 +2,14 @@
   <div class="index-wrapper">
 
     <section class="index-wrapper__section isFirst">
-      <div class="index-wrapper__section--introduction section-inner introduction-wrapper">
+      <div class="section-inner introduction-wrapper">
         <div class="section-inner__title introduction-wrapper__greet">
           <h1 class="introduction-wrapper__greet--title isSerif">
             ABOUT
           </h1>
         </div>
-        <div class="section-inner__body introduction-wrapper__body">
-          <p class="section-inner__body--text introduction-wrapper__body--text">
+        <div class="section-inner__body introduction-wrapper__lead">
+          <p class="section-inner__body--text">
             COMING SOON
           </p>
         </div>
@@ -316,6 +316,14 @@ export default {
       @include mq(sm) {
         font-size: 8vw;
       }
+    }
+  }
+
+  &__lead {
+    text-align: center;
+
+    @include mq(sm) {
+      text-align: left;
     }
   }
 
