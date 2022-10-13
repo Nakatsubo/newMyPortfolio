@@ -38,7 +38,7 @@
                     to="/project"
                     class="glMenu-item-project"
                     >
-                    <div id="link-wrapper-project" class="link-wrapper-glMenu mouse-link">
+                    <div id="glLink-wrapper-project" class="link-wrapper-glMenu mouse-link">
                       <span class="link-cover"></span>
                       <span class="link-wrapper-glMenu__list">
                         <span class="link-wrapper-glMenu__list--item">PROJECT</span>
@@ -52,7 +52,7 @@
                     to="/about"
                     class="glMenu-item-about"
                     >
-                    <div id="link-wrapper-about" class="link-wrapper-glMenu mouse-link">
+                    <div id="glLink-wrapper-about" class="link-wrapper-glMenu mouse-link">
                       <span class="link-cover"></span>
                       <span class="link-wrapper-glMenu__list">
                         <span class="link-wrapper-glMenu__list--item">ABOUT</span>
@@ -66,7 +66,7 @@
                     to="/blog"
                     class="glMenu-item-blog"
                     >
-                    <div id="link-wrapper-blog" class="link-wrapper-glMenu mouse-link">
+                    <div id="glLink-wrapper-blog" class="link-wrapper-glMenu mouse-link">
                       <span class="link-cover"></span>
                       <span class="link-wrapper-glMenu__list">
                         <span class="link-wrapper-glMenu__list--item">BLOG</span>
@@ -142,28 +142,28 @@ export default {
       linkWrapperMenuClose.classList.remove('isHover')
     },
     mouseoverProject() {
-      const linkWrapperProject = document.getElementById('link-wrapper-project')
-      linkWrapperProject.classList.add('isHover')
+      const glLinkWrapperProject = document.getElementById('glLink-wrapper-project')
+      glLinkWrapperProject.classList.add('isHover')
     },
     mouseleaveProject() {
-      const linkWrapperProject = document.getElementById('link-wrapper-project')
-      linkWrapperProject.classList.remove('isHover')
+      const glLinkWrapperProject = document.getElementById('glLink-wrapper-project')
+      glLinkWrapperProject.classList.remove('isHover')
     },
     mouseoverAbout() {
-      const linkWrapperAbout = document.getElementById('link-wrapper-about')
-      linkWrapperAbout.classList.add('isHover')
+      const glLinkWrapperAbout = document.getElementById('glLink-wrapper-about')
+      glLinkWrapperAbout.classList.add('isHover')
     },
     mouseleaveAbout() {
-      const linkWrapperAbout = document.getElementById('link-wrapper-about')
-      linkWrapperAbout.classList.remove('isHover')
+      const glLinkWrapperAbout = document.getElementById('glLink-wrapper-about')
+      glLinkWrapperAbout.classList.remove('isHover')
     },
     mouseoverBlog() {
-      const linkWrapperBlog = document.getElementById('link-wrapper-blog')
-      linkWrapperBlog.classList.add('isHover')
+      const glLinkWrapperBlog = document.getElementById('glLink-wrapper-blog')
+      glLinkWrapperBlog.classList.add('isHover')
     },
     mouseleaveBlog() {
-      const linkWrapperBlog = document.getElementById('link-wrapper-blog')
-      linkWrapperBlog.classList.remove('isHover')
+      const glLinkWrapperBlog = document.getElementById('glLink-wrapper-blog')
+      glLinkWrapperBlog.classList.remove('isHover')
     },
 
     // Global Menu
@@ -292,12 +292,16 @@ export default {
 
 <style lang="scss" scoped>
 
+// Layout
 .header-wrapper {
+  width: 100%;
+  height: auto;
+  padding: 4rem;
   position: fixed;
-  top: 4rem; right: 4rem; left: 4rem;
+  top: 0; left: 0;
 
-  @include mq() {
-    top: 3.6rem; right: 2.4rem; left: 2.4rem;
+  @include mq(sm) {
+    padding: 3.6rem 2.4rem;
   }
 }
 
@@ -322,11 +326,12 @@ export default {
   }
 
   &__menu {
-    font-size: 1.2rem;
+    padding-top: 1.1rem;
+    font-size: max(1.2vw, 1.2rem);
     font-weight: 500;
     letter-spacing: 0.08rem;
 
-    @include mq() {
+    @include mq(sm) {
       font-size: 1.2rem;
     }
   }
@@ -358,15 +363,16 @@ export default {
 
   &__close {
     position: absolute;
-    top: calc(4rem + 1.25vw / 2); right: 4rem;
-    font-size: 1.2rem;
+    top: 4rem; right: 4rem;
+    padding-top: 1.1rem;
+    font-size: max(1.2vw, 1.2rem);
     font-weight: 500;
     letter-spacing: 0.08rem;
     color: $key-color-white;
     opacity: 0;
 
-    @include mq() {
-      top: 5.2rem;
+    @include mq(sm) {
+      top: 3.6rem; right: 2.4rem;
       font-size: 1.2rem;
     }
   }
@@ -400,7 +406,7 @@ export default {
     justify-content: center;
     align-items: center;
 
-    @include mq() {
+    @include mq(sm) {
       flex-flow: column nowrap;
     }
 
@@ -414,7 +420,7 @@ export default {
         margin-left: 0;
       }
 
-      @include mq() {
+      @include mq(sm) {
         margin-bottom: 3rem;
         margin-left: 0;
         font-size: 2rem;

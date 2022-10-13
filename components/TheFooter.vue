@@ -7,18 +7,23 @@
 </template>
 
 <style lang="scss" scoped>
+
 .footer-wrapper {
+  width: 100%;
+  height: auto;
+  padding: 4rem;
+  text-align: center;
   position: fixed;
-  bottom: 4rem;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0; left: 0;
 
   @include mq() {
-    bottom: 3.6rem;
+    padding: 3.6rem 2.4rem;
   }
 
   &__copyright {
     font-size: max(1vw, 1rem);
+    font-weight: 500;
+    letter-spacing: 0.08rem;
 
     @include mq() {
       font-size: 1rem;
@@ -26,4 +31,5 @@
   }
 
 }
+
 </style>
