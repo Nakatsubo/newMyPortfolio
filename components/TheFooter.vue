@@ -7,14 +7,17 @@
 </template>
 
 <style lang="scss" scoped>
+
 .footer-wrapper {
+  width: 100%;
+  height: auto;
+  padding: 0 4rem 4rem;
+  text-align: center;
   position: fixed;
-  bottom: 4rem;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0; left: 0;
 
   @include mq() {
-    bottom: 3.6rem;
+    padding: 0 2.4rem 3.6rem;
   }
 
   &__copyright {
@@ -26,4 +29,5 @@
   }
 
 }
+
 </style>
