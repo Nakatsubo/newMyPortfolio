@@ -300,7 +300,7 @@ export default {
   position: fixed;
   top: 0; left: 0;
 
-  @include mq() {
+  @include mq(sm) {
     padding: 3.6rem 2.4rem;
   }
 }
@@ -331,7 +331,7 @@ export default {
     font-weight: 500;
     letter-spacing: 0.08rem;
 
-    @include mq() {
+    @include mq(sm) {
       font-size: 1.2rem;
     }
   }
@@ -371,7 +371,7 @@ export default {
     color: $key-color-white;
     opacity: 0;
 
-    @include mq() {
+    @include mq(sm) {
       top: 3.6rem; right: 2.4rem;
       font-size: 1.2rem;
     }
@@ -406,7 +406,7 @@ export default {
     justify-content: center;
     align-items: center;
 
-    @include mq() {
+    @include mq(sm) {
       flex-flow: column nowrap;
     }
 
@@ -420,7 +420,7 @@ export default {
         margin-left: 0;
       }
 
-      @include mq() {
+      @include mq(sm) {
         margin-bottom: 3rem;
         margin-left: 0;
         font-size: 2rem;

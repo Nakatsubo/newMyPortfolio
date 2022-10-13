@@ -314,7 +314,7 @@ export default {
       margin: 0 auto 8rem;
       font-size: max(4vw, 4rem);
 
-      @include mq() {
+      @include mq(sm) {
         font-size: 8vw;
       }
     }
