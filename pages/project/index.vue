@@ -19,13 +19,6 @@
 
     <section class="index-wrapper__section">
       <div class="section-inner contact-wrapper">
-        <div class="section-inner__number">
-          <p class="section-inner__number--text">
-            05
-            <span class="number-border"></span>
-            05
-          </p>
-        </div>
         <div class="section-inner__title">
           <h1 class="section-inner__title--text">
             CONTACT
