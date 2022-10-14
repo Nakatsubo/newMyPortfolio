@@ -10,13 +10,13 @@
             05
           </p>
         </div>
-        <div class="section-inner__title introduction-wrapper__greet">
-          <h1 class="introduction-wrapper__greet--title isSerif">
+        <div class="section-inner__title introduction-wrapper__title">
+          <h1 class="introduction-wrapper__title--maintitle isSerif">
             WELCOME TO<br>
             THE WORKSPACE <br class="isSp">OF<br>
             <span class="isDetail isColoring">YUSUKE <br class="isSp">NAKATSUBO</span>
           </h1>
-           <p class="introduction-wrapper__greet--subtitle">
+           <p class="introduction-wrapper__title--subtitle">
              WEB DESIGNER, WEB DEVELOPER & <br class="isSp">WEB DIRECTER IN TOKYO.
            </p>
         </div>
@@ -97,7 +97,7 @@
             映像のポストプロダクションを経て、Web制作会社へジョイン。
             プロダクションマネージャー、ディレクターとして、多種多様な業界のクライアント様のデジタル領域制作を担い、実績を積みました。<br>
             並行して、デザイン、フロントエンド開発、バックエンド構築、動画制作などの業務を実行し、制作スキル一式をブラッシュアップ。<br>
-            数社を経て、現在はフリーランスとして、Webサイト構築、サイトの保守・運用メインに活動しています。
+            現在はフリーランスとして、Webサイト構築、コンテンツ制作、保守・運用をメインに活動しています。
           </p>
         </div>
       </div>
