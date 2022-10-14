@@ -256,34 +256,33 @@ html.dark-mode .introduction-arrow__image {
 }
 
 
-// link
+// view more link
 .section-link {
   position: absolute;
-  bottom: 16rem; right: 16rem;
+  bottom: 16rem; right: 0;
+  padding-right: 16rem;
   font-size: max(1vw, 1rem);
   font-weight: 500;
   letter-spacing: 0.08rem;
 
   @include mq(sm) {
-    display: inline-block;
-    right: 0; bottom: 8.2rem; left: 0;
+    bottom: 10.2rem; right: 0; left: 0;
+    padding-right: 0;
   }
 
   &:after {
     position: absolute;
-    top: 0.45vw;
-    right: -16rem;
+    top: 0.45vw; right: 0;
     content: '';
-    display: inline-block;
     width: 15rem;
     height: auto;
     border-top: 1px solid $key-color-black;
 
     @include mq(sm) {
-      top: 0; right: 0; bottom: 0; left: 0;
+      top: auto; right: 0; bottom: 0; left: 0;
       width: 8.58rem;
       border-top: none;
-      border-bottom: 2px solid $key-color-black;
+      border-bottom: 1px solid $key-color-black;
       margin: 0 auto;
     }
   }
@@ -291,7 +290,7 @@ html.dark-mode .introduction-arrow__image {
 
 // dark-mode
 html.dark-mode .section-link::after {
-  border-bottom: 2px solid $key-color-white;
+  border-bottom: 1px solid $key-color-white;
 }
 
 
