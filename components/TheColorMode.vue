@@ -59,6 +59,10 @@ export default {
   }
 
   &__btn {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 
     .toggle-input {
       position: absolute;
