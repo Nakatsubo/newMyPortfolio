@@ -10,7 +10,9 @@
         </div>
         <div class="section-inner__body introduction-wrapper__lead">
           <p class="section-inner__body--text">
-            COMING SOON
+            ディレクション、デザイン、コーディングと、<br>
+            各制作フェーズにおいて精度の高いクリエイティブが構築できるよう全体管理を行なった上で、<br>
+            効率よく一気通貫で成果物を提供いたします。
           </p>
         </div>
       </div>
@@ -313,9 +315,11 @@ export default {
   }
 
   &__lead {
-    text-align: center;
+    padding: 0 8vw;
+    text-align: left;
 
     @include mq(sm) {
+      padding: 0;
       text-align: left;
     }
   }

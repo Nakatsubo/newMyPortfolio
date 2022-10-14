@@ -58,11 +58,11 @@ export default {
 }
 
 .header-wrapper {
-  z-index: 2;
+  z-index: 3;
 }
 
 .main-wrapper {
-  z-index: 1;
+  z-index: 2;
 }
 
 .footer-wrapper {
