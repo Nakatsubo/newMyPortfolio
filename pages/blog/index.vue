@@ -3,8 +3,8 @@
 
     <section class="index-wrapper__section isFirst">
       <div class="section-inner introduction-wrapper">
-        <div class="section-inner__title introduction-wrapper__greet">
-          <h1 class="introduction-wrapper__greet--title isSerif">
+        <div class="section-inner__title introduction-wrapper__title">
+          <h1 class="introduction-wrapper__title--text isSerif">
             BLOG
           </h1>
         </div>
@@ -299,10 +299,10 @@ export default {
 // introduction
 .introduction-wrapper {
 
-  // greet
-  &__greet {
+  // title
+  &__title {
 
-    &--title {
+    &--text {
       margin: 0 auto 8rem;
       font-size: max(4vw, 4rem);
 
@@ -313,11 +313,20 @@ export default {
   }
 
   &__lead {
-    text-align: center;
+    padding: 0 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
 
     @include mq(sm) {
-      text-align: left;
+      padding: 0;
+      justify-content: flex-start;
     }
+
+     &--text {
+      flex: 1;
+     }
   }
 
 }

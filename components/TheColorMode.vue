@@ -108,7 +108,8 @@ export default {
      .toggle-text {
       text-align: center;
      }
-
   }
+
 }
+
 </style>

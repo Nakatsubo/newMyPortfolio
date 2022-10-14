@@ -24,12 +24,17 @@
     font-size: max(1vw, 1rem);
     font-weight: 500;
     letter-spacing: 0.08rem;
+    opacity: 0.4;
 
     @include mq() {
       font-size: 1rem;
     }
   }
 
+}
+
+html.dark-mode .footer-wrapper__copyright {
+  opacity: 0.8;
 }
 
 </style>

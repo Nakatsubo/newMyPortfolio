@@ -7,9 +7,17 @@
   font-style: normal;
 }
 
- .isColoring {
-   color: $key-color-purple;
- }
+.isColoring {
+  color: $key-color-purple;
+}
+
+.isPc {
+  display: block;
+
+  @include mq(sm) {
+    display: none;
+  }
+}
 
 .isSp {
   display: none;
@@ -179,8 +187,8 @@ html.dark-mode .section-inner__body--text {
   height: auto;
   position: relative;
 
-  // greet
-  &__greet {
+  // title
+  &__title {
     width: 100%;
     height: auto;
     text-align: center;
@@ -190,7 +198,7 @@ html.dark-mode .section-inner__body--text {
       text-align: left;
     }
 
-    &--title {
+    &--maintitle {
       margin: 0 auto 2rem;
       line-height: 1.1;
       font-size: max(4.8vw, 4.8rem);

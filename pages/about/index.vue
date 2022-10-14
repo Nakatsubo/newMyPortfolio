@@ -3,16 +3,47 @@
 
     <section class="index-wrapper__section isFirst">
       <div class="section-inner introduction-wrapper">
-        <div class="section-inner__title introduction-wrapper__greet">
-          <h1 class="introduction-wrapper__greet--title isSerif">
+        <div class="section-inner__title introduction-wrapper__title">
+          <h1 class="introduction-wrapper__title--text isSerif">
             ABOUT
           </h1>
         </div>
         <div class="section-inner__body introduction-wrapper__lead">
           <p class="section-inner__body--text">
-            ディレクション、デザイン、コーディングと、<br>
-            各制作フェーズにおいて精度の高いクリエイティブが構築できるよう全体管理を行なった上で、<br>
-            効率よく一気通貫で成果物を提供いたします。
+            ディレクション、デザイン、コーディングと、<br class="isSp">
+            各制作フェーズにおいて、<br class="isPc">精度を高め効率的に、<br class="isSp">一気通貫で成果物を提供いたします。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="index-wrapper__section">
+      <div class="section-inner about-wrapper">
+        <div class="about-wrapper-item about-wrapper__title">
+          <h1 class="about-wrapper__title--text">LANGUAGE, etc.</h1>
+        </div>
+        <div class="about-wrapper-item">
+          <h2 class="about-wrapper-item__title">LANGUAGE</h2>
+          <p class="about-wrapper-item__lead">
+            HTML&ensp;CSS&ensp;Sass&ensp;JavaScript&ensp;TypeScript&ensp;PHP&ensp;Ruby&ensp;Python&ensp;SQL
+          </p>
+        </div>
+        <div class="about-wrapper-item">
+          <h2 class="about-wrapper-item__title">FRAMEWORK</h2>
+          <p class="about-wrapper-item__lead">
+            jQuery&ensp;Node.js&ensp;Vue.js&ensp;Nuxt.js&ensp;Ruby on Rails
+          </p>
+        </div>
+        <div class="about-wrapper-item">
+          <h2 class="about-wrapper-item__title">CMS</h2>
+          <p class="about-wrapper-item__lead">
+            WordPress&ensp;MovableType
+          </p>
+        </div>
+        <div class="about-wrapper-item">
+          <h2 class="about-wrapper-item__title">TOOL</h2>
+          <p class="about-wrapper-item__lead">
+            Google&ensp;Adobe&ensp;Git&ensp;Docker&ensp;...and More
           </p>
         </div>
       </div>
@@ -301,10 +332,10 @@ export default {
 // introduction
 .introduction-wrapper {
 
-  // greet
-  &__greet {
+  // title
+  &__title {
 
-    &--title {
+    &--text {
       margin: 0 auto 8rem;
       font-size: max(4vw, 4rem);
 
@@ -316,14 +347,78 @@ export default {
 
   &__lead {
     padding: 0 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: left;
 
     @include mq(sm) {
       padding: 0;
+      justify-content: flex-start;
+    }
+
+     &--text {
+      flex: 1;
+     }
+  }
+
+}
+
+// about
+.about-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include mq(sm) {
+    flex-flow: column nowrap;
+  }
+
+  &__title {
+
+    &--text {
       text-align: left;
+      font-size: max(1.4vw, 1.4rem);
+      font-weight: 500;
+    }
+  }
+}
+
+.about-wrapper-item {
+  max-width: calc(100% / 2);
+  width: 100%;
+  height: auto;
+  padding: 4rem;
+  line-height: 1.5;
+
+  @include mq(sm) {
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    font-size: max(1.4vw, 1.4rem);
+    font-weight: 500;
+    text-align: left;
+    opacity: 0.4;
+
+    @include mq(sm) {
+      margin-bottom: 1.5rem;
+      font-size: max(1.2vw, 1.2rem);
     }
   }
 
+  &__lead {
+    font-size: max(1.4vw, 1.4rem);
+    text-align: left;
+
+    @include mq(sm) {
+      font-size: max(1.2vw, 1.2rem);
+    }
+  }
 }
 
 </style>
