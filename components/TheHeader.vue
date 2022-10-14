@@ -263,8 +263,10 @@ export default {
             }
           })
         setTimeout(() => {
-          wallPaperWrapper.classList.remove('isMenuOpen')
           headerWrapper.classList.remove('isMenuOpen')
+        }, 400)
+        setTimeout(() => {
+          wallPaperWrapper.classList.remove('isMenuOpen')
         }, 600)
       })
 
@@ -281,8 +283,12 @@ export default {
               }
             }
           )
-          headerWrapper.classList.remove('isMenuOpen')
-          wallPaperWrapper.classList.remove('isMenuOpen')
+          setTimeout(() => {
+            headerWrapper.classList.remove('isMenuOpen')
+          }, 400)
+          setTimeout(() => {
+            wallPaperWrapper.classList.remove('isMenuOpen')
+          }, 600)
         })
       }
     },
