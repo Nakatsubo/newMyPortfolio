@@ -574,12 +574,18 @@ export default {
 }
 
 // dark-mode
+html.dark-mode .list-item-wrapper {
+  opacity: 1;
+}
+
 html.dark-mode .list-item-wrapper__border {
   border-top: 1px solid $key-color-white;
 }
+
 html.dark-mode .list-item-wrapper.isActive {
   border: 1px solid $key-color-white;
 }
+
 html.dark-mode .list-item-wrapper.isActive .list-item-wrapper__border {
   border-top: 2px solid $key-color-white;
 }

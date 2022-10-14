@@ -136,11 +136,11 @@ export default {
 html.dark-mode .wallPaper-wrapper {
 
   .wallPaper01 {
-    stroke: rgba(255, 255, 255, 0.32);
+    stroke: rgba(255, 255, 255, 0.08);
   }
 
   .wallPaper02 {
-    stroke: rgba(255, 255, 255, 0.4);
+    stroke: rgba(255, 255, 255, 0.16);
   }
 }
 
