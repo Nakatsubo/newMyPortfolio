@@ -169,6 +169,9 @@ html.dark-mode .section-inner__number--text .number-border {
   border-top: 1px solid $key-color-white;
 }
 
+html.dark-mode .section-inner__body--text {
+  opacity: 1;
+}
 
 // introduction
 .introduction-wrapper {
@@ -306,15 +309,17 @@ html.dark-mode .section-link::after {
     align-items: center;
 
     &--item {
-      margin-left: 2rem;
-      font-size: max(1.5vw, 1.5rem);
+      margin-left: 2.4rem;
+      font-size: max(1.4vw, 1.4rem);
+      font-weight: 500;
 
       &:first-of-type {
         margin-left: 0;
       }
 
       @include mq(sm) {
-        font-size: 1.2rem;
+        margin-left: 1.6rem;
+        font-size: max(1.2vw, 1.2rem);;
       }
     }
   }
